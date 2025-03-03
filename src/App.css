@@ -1,4 +1,4 @@
-html {
+/* html {
   box-sizing: border-box;
 }
 
@@ -449,7 +449,7 @@ textarea {
 }
 
 #footer {
-  background: #f64b4b;
+  background: #4bf668;
   padding: 50px 0;
   color: #fff;
   text-align: center;
@@ -1175,4 +1175,45 @@ textarea {
     font-size: 26px;
     margin: 0;
   }
+} */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #222;
+  --green: #ffd80a;
+  --grey1: #f0f0f0;
+  --grey2: #e9d7d3;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+li {
+  list-style-type: none;
 }
