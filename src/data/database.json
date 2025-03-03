@@ -1,62 +1,248 @@
 {
-  "products": [
+  "categories": [
     {
       "id": 1,
-      "title": "Lồng chim",
-      "description": "",
-      "category": "bird",
-      "price": 9.99,
-      "discountPercentage": 7.17,
-      "rating": 4.94,
-      "stock": 5,
-      "sku": "RCH45Q1A",
-      "weight": 2,
-      "dimensions": {
-        "width": 23.17,
-        "height": 14.43,
-        "depth": 28.01
-      },
-      "warrantyInformation": "1 month warranty",
-      "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Low Stock",
-      "reviews": [
-        {
-          "rating": 2,
-          "comment": "Very unhappy with my purchase!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "John Doe",
-          "reviewerEmail": "john.doe@x.dummyjson.com"
-        },
-        {
-          "rating": 2,
-          "comment": "Not as described!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Nolan Gonzalez",
-          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Very satisfied!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Scarlett Wright",
-          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "30 days return policy",
-      "minimumOrderQuantity": 24,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.618Z",
-        "updatedAt": "2024-05-23T08:56:21.618Z",
-        "barcode": "9164035109868",
-        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "Img/latest_product-1.webp"
-      ],
-      "thumbnail": "Img/latest_product-1.webp"
+      "name": "Thức ăn cho chó"
+    },
+    {
+      "id": 2,
+      "name": "Thức ăn cho mèo"
+    },
+    {
+      "id": 3,
+      "name": "Thức ăn cho chim"
+    },
+    {
+      "id": 4,
+      "name": "Thức ăn cho thỏ"
+    },
+    {
+      "id": 5,
+      "name": "Thức ăn cho cá"
+    },
+    {
+      "id": 6,
+      "name": "Thức ăn cho rùa"
+    },
+    {
+      "id": 7,
+      "name": "Thức ăn cho hamster"
+    },
+    {
+      "id": 8,
+      "name": "Phụ kiện cho chó"
+    },
+    {
+      "id": 9,
+      "name": "Phụ kiện cho mèo"
+    },
+    {
+      "id": 10,
+      "name": "Phụ kiện cho chim"
     }
   ],
-  "category": [
-    {}
+  "products": [
+    {
+      "id": 101,
+      "name": "Thức ăn cho chó CM5",
+      "price": 250000,
+      "unit": "1.5kg",
+      "category": 1,
+      "image": "dog_food_cm5.jpg",
+      "rating": 5,
+      "details": {
+        "brand": "Pawsitive Pets",
+        "type": "Hạt khô",
+        "suitable_for": "Tất cả các loại chó",
+        "package_size": "5kg",
+        "main_ingredients": [
+          "Gà tươi",
+          "Cá hồi",
+          "Lúa mạch"
+        ],
+        "function": "Hỗ trợ sức khỏe tim mạch, da lông và hệ tiêu hóa"
+      }
+    },
+    {
+      "id": 102,
+      "name": "Thức ăn cho mèo Meo",
+      "price": 280000,
+      "unit": "1.5kg",
+      "category": 2,
+      "image": "cat_food_meo.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 103,
+      "name": "Thức ăn cho chim Bird Food",
+      "price": 280000,
+      "unit": "1.5kg",
+      "category": 3,
+      "image": "bird_food.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 104,
+      "name": "Thức ăn cho thỏ Happy Rabbit",
+      "price": 200000,
+      "unit": "1kg",
+      "category": 4,
+      "image": "rabbit_food_happy.jpg",
+      "rating": 4.7,
+      "details": {
+        "brand": "Bunny Bliss",
+        "type": "Hạt khô",
+        "suitable_for": "Tất cả các loại thỏ",
+        "package_size": "1kg",
+        "main_ingredients": [
+          "Cỏ khô",
+          "Cỏ linh lăng",
+          "Hạt lanh"
+        ],
+        "function": "Cung cấp dinh dưỡng toàn diện"
+      }
+    },
+    {
+      "id": 105,
+      "name": "Thức ăn cho cá Fish Feast",
+      "price": 150000,
+      "unit": "500g",
+      "category": 5,
+      "image": "fish_food_feast.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 106,
+      "name": "Thức ăn cho rùa Turtle Treats",
+      "price": 220000,
+      "unit": "700g",
+      "category": 6,
+      "image": "turtle_food_treats.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": 107,
+      "name": "Thức ăn cho hamster Hammy Delight",
+      "price": 180000,
+      "unit": "500g",
+      "category": 7,
+      "image": "hamster_food_delight.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 108,
+      "name": "Dây dắt chó Comfort Leash",
+      "price": 150000,
+      "unit": "1 chiếc",
+      "category": 8,
+      "image": "dog_leash_comfort.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 109,
+      "name": "Nhà cho mèo Cozy Cat House",
+      "price": 500000,
+      "unit": "1 chiếc",
+      "category": 9,
+      "image": "cat_house_cozy.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": 110,
+      "name": "Lồng cho chim Bird Cage Deluxe",
+      "price": 700000,
+      "unit": "1 chiếc",
+      "category": 10,
+      "image": "bird_cage_deluxe.jpg",
+      "rating": 4.8
+    }
+  ],
+  "special_offers": [
+    {
+      "title": "Khuyến mãi lớn lên đến 50%",
+      "description": "Chỉ trong hôm nay",
+      "image": "sale_50.jpg"
+    },
+    {
+      "title": "Nhận thêm 10% giảm giá",
+      "description": "Ưu đãi đặc biệt",
+      "image": "sale_10.jpg"
+    }
+  ],
+  "company_info": [
+    {
+      "name": "Foxic Pet Store",
+      "phone": "0999 999 999",
+      "email": "support@foxic.com",
+      "address": "123 Đường Pet Shop, TP.HCM",
+      "website": "https://foxic.com",
+      "working_hours": "Mon-Fri, 9 AM - 6 PM"
+    },
+    {
+      "name": "Pawsitive Pets Store",
+      "phone": "0888 888 888",
+      "email": "contact@pawsitivepets.com",
+      "address": "456 Đường Pet Store, Đà Nẵng",
+      "website": "https://pawsitivepets.com",
+      "working_hours": "Mon-Sat, 9 AM - 6 PM"
+    }
+  ],
+  "latest_products": [
+    {
+      "id": 110,
+      "name": "Lồng cho chim Bird Cage Deluxe",
+      "price": 700000,
+      "unit": "1 chiếc",
+      "category": 10,
+      "image": "bird_cage_deluxe.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 109,
+      "name": "Nhà cho mèo Cozy Cat House",
+      "price": 500000,
+      "unit": "1 chiếc",
+      "category": 9,
+      "image": "cat_house_cozy.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": 108,
+      "name": "Dây dắt chó Comfort Leash",
+      "price": 150000,
+      "unit": "1 chiếc",
+      "category": 8,
+      "image": "dog_leash_comfort.jpg",
+      "rating": 4.7
+    }
+  ],
+  "featured_products": [
+    {
+      "id": 101,
+      "name": "Thức ăn cho chó CM5",
+      "price": 250000,
+      "unit": "1.5kg",
+      "category": 1,
+      "image": "dog_food_cm5.jpg",
+      "rating": 5
+    },
+    {
+      "id": 106,
+      "name": "Thức ăn cho rùa Turtle Treats",
+      "price": 220000,
+      "unit": "700g",
+      "category": 6,
+      "image": "turtle_food_treats.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": 109,
+      "name": "Nhà cho mèo Cozy Cat House",
+      "price": 500000,
+      "unit": "1 chiếc",
+      "category": 9,
+      "image": "cat_house_cozy.jpg",
+      "rating": 4.9
+    }
   ]
 }
