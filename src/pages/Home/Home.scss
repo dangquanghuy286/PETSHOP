@@ -93,3 +93,53 @@
         }
     }
 }
+
+.three-banner {
+    width: 84%;
+    margin: auto;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 28px;
+        position: relative;
+        width: 100%;
+
+        &:last-child {
+            color: #fff;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: -10px;
+        left: 15%;
+        bottom: 0;
+        margin: auto;
+        width: 50%;
+        height: 100px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        margin-bottom: 13px;
+        color: #272727;
+        font-weight: bold;
+    }
+
+    &__title {
+        font-size: 27px;
+        margin-bottom: 13px;
+        color: #272727;
+        font-weight: bold;
+
+        &:last-child {
+            color: #fff;
+        }
+    }
+
+
+}
