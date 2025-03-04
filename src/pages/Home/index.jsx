@@ -1,6 +1,8 @@
+import { NavLink } from "react-router-dom";
 import Facility from "../Facility";
 import Store_Category from "../Home_Category";
 import "./Home.scss"
+import Featureproduct from "../Home_fea";
 function Home() {
     return (
         <>
@@ -20,9 +22,10 @@ function Home() {
                     <h2 className="second-banner__title">
                         Thức ăn ngon & lành mạnh! <br />
                     </h2>
-                    <button className="second-banner__button">Mua Ngay</button>
+                    <NavLink to="/categories"><button className="second-banner__button">Mua Ngay</button></NavLink>
                 </div>
             </div>
+            <Featureproduct />
         </>
 
     );
