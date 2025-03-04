@@ -27,23 +27,23 @@ function Home() {
                 </div>
             </div>
             <Featureproduct />
-            <div class="three-banner">
-                <div class="three-banner__container">
-                    <div class="three-banner__item">
-                        <img src="Img/left_banner.webp" alt="Khuyến mãi lớn" class="three-banner__image" />
-                        <div class="three-banner__content">
-                            <h5 class="three-banner__subtitle">Chỉ Trong Ngày Hôm Nay</h5>
-                            <h4 class="three-banner__title">
+            <div className="three-banner">
+                <div className="three-banner__container">
+                    <div className="three-banner__item">
+                        <img src="Img/left_banner.webp" alt="Khuyến mãi lớn" className="three-banner__image" />
+                        <div className="three-banner__content">
+                            <h5 className="three-banner__subtitle">Chỉ Trong Ngày Hôm Nay</h5>
+                            <h4 className="three-banner__title">
                                 Khuyến Mãi Lớn <br />
                                 Lên Đến 50%
                             </h4>
                         </div>
                     </div>
-                    <div class="three-banner__item">
-                        <img src="Img/right_banner.webp" alt="Ưu đãi đặc biệt" class="three-banner__image" />
-                        <div class="three-banner__content">
-                            <h5 class="three-banner__subtitle">Ưu Đãi Đặc Biệt</h5>
-                            <h4 class="three-banner__title">
+                    <div className="three-banner__item">
+                        <img src="Img/right_banner.webp" alt="Ưu đãi đặc biệt" className="three-banner__image" />
+                        <div className="three-banner__content">
+                            <h5 className="three-banner__subtitle">Ưu Đãi Đặc Biệt</h5>
+                            <h4 className="three-banner__title">
                                 Nhận thêm <br />
                                 10% Giảm Giá
                             </h4>

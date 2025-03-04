@@ -4,10 +4,10 @@ function Error404() {
 
         <>
             <h1 className="title">Không tìm thấy trang !</h1>
-            <section class="error-container">
-                <span class="four"><span class="screen-reader-text">4</span></span>
-                <span class="zero"><span class="screen-reader-text">0</span></span>
-                <span class="four"><span class="screen-reader-text">4</span></span>
+            <section className="error-container">
+                <span className="four"><span class="screen-reader-text">4</span></span>
+                <span className="zero"><span class="screen-reader-text">0</span></span>
+                <span className="four"><span class="screen-reader-text">4</span></span>
             </section></>
     )
 }
