@@ -3,6 +3,7 @@ import Facility from "../Facility";
 import Store_Category from "../Home_Category";
 import "./Home.scss"
 import Featureproduct from "../Home_fea";
+import HomeLatest from "../Home_LastestProduct";
 function Home() {
     return (
         <>
@@ -50,6 +51,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <HomeLatest />
 
         </>
 

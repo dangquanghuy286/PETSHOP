@@ -1,26 +1,17 @@
-.feature-product {
+.latest-products {
     width: 84%;
     margin: auto;
-    padding: 70px 0;
-    gap: 20px;
-    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 40px;
 
-    /* Header */
     &__header {
         text-align: center;
-        flex-wrap: wrap;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 30px;
     }
 
     &__title {
         font-size: 27px;
         margin-bottom: 13px;
         color: #272727;
-        font-weight: bold;
     }
 
     &__icon {
@@ -30,11 +21,6 @@
         width: 20%;
         margin: auto;
         font-size: 19px;
-
-        i {
-            font-size: 20px;
-            color: #57aa5e;
-        }
 
         &::before,
         &::after {
@@ -53,10 +39,9 @@
         &::after {
             right: 0;
         }
+
+
     }
-
-    /* Container */
-
 
     &__list {
         display: flex;

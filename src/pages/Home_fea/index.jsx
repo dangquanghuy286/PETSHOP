@@ -16,7 +16,7 @@ function Featureproduct() {
             <section id="feature-product" className="feature-product ">
                 <div className="feature-product__container">
                     <div className="shop-category__header">
-                        <h3 className="shop-category__title">Danh Mục Sản Phẩm</h3>
+                        <h3 className="shop-category__title">Sản phẩm nổi bật</h3>
                         <div className="shop-category__icon">
                             <i className="fa-solid fa-paw"></i>
                         </div>

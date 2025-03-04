@@ -66,7 +66,7 @@ function Store_Category() {
                         </div>
                     </div>
                     <div className="shop-category__pet-list">
-                        {data_Cata.slice(0, 3).map((pet) => (
+                        {data_Cata.slice(0, 4).map((pet) => (
                             <div className="shop-category__pet-item" key={pet.id}>
                                 <div className="shop-category__pet-image">
                                     <img src={pet.image} alt={pet.name} />
