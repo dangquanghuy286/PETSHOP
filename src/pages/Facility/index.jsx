@@ -18,7 +18,7 @@ function Facility() {
                         </path>
                     </svg>
 
-                    <i className="facility__icon fa-solid fa-bag-shopping"></i>
+                    <i className="fa-solid fa-bag-shopping"></i>
                     <h3 className="facility__title">Đặt hàng hôm nay<br />tiết kiệm 10%</h3>
                 </div>
 
@@ -36,7 +36,7 @@ function Facility() {
                             ></animate>
                         </path>
                     </svg>
-                    <i className="facility__icon facility__icon--fa fa-solid fa-arrow-up-from-bracket"></i>
+                    <i className="facility__icon--fa fa-solid fa-arrow-up-from-bracket"></i>
                     <h3 className="facility__title">Đảm Bảo<br />Hoàn Tiền</h3>
                 </div>
 
@@ -54,7 +54,7 @@ function Facility() {
                             ></animate>
                         </path>
                     </svg>
-                    <i className="facility__icon facility__icon--fa fa-solid fa-truck"></i>
+                    <i className="fa-solid fa-truck"></i>
                     <h3 className="facility__title">Giao Hàng Nhanh</h3>
                 </div>
             </div>
