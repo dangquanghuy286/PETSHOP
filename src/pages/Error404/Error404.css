@@ -115,7 +115,7 @@
     }
 }
 
-h1 {
+.title h1 {
     text-align: center;
     margin: 30px 15px;
     color: #d4969f;

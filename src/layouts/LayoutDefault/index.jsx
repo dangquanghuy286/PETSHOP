@@ -13,10 +13,17 @@ function LayoutDefault() {
                 <div className="layout-default__menu">
                     <ul>
                         <li><NavLink to="/">Trang Chủ</NavLink></li>
-                        <li><NavLink to="/categories">Cửa Hàng</NavLink></li>
-                        <li><NavLink to="/feature_product">Sản Phẩm Nổi Bật</NavLink></li>
-                        <li><NavLink to="/lastest_products">Sản Phẩm Mới Nhất</NavLink></li>
+                        <li><NavLink to="/intro">Giới thiệu</NavLink></li>
+                        <li>
+                            <NavLink to="/categories">Cửa Hàng</NavLink>
+                            <ul>
+                                <li><NavLink to="/categories/feature_product">Sản Phẩm Nổi Bật</NavLink></li>
+                                <li><NavLink to="/categories/lastest_products">Sản Phẩm Mới Nhất</NavLink></li>
+                            </ul>
+                        </li>
+
                         <li><NavLink to="/contact">Liên Hệ</NavLink></li>
+                        <li><NavLink to="/blog">Blog</NavLink></li>
                     </ul>
                 </div>
 
@@ -92,7 +99,7 @@ function LayoutDefault() {
                     </div>
 
                 </div>
-                <div className="layout-default__copyRight">Copy Right 2025 </div>
+                <div className="layout-default__copyRight">Copy Right @2025 by Quang Huy </div>
             </footer>
 
         </div>

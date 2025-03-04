@@ -1,0 +1,55 @@
+.facility {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 20px;
+
+    &--wide {
+        width: 84%;
+        margin: auto;
+    }
+
+    &__item {
+        width: 220px;
+        height: 255px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        color: white;
+
+        svg {
+            position: absolute;
+        }
+
+        i {
+            z-index: 90;
+            font-size: 32px;
+        }
+
+
+
+    }
+
+    &__icon {
+        position: absolute;
+
+        &.fa-solid {
+            font-size: 32px; // Cỡ chữ lớn hơn nếu có fa-solid
+            z-index: 90;
+        }
+    }
+
+    &__title {
+
+        z-index: 99;
+        text-transform: uppercase;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 1.1;
+        padding-top: 12px;
+
+    }
+
+}

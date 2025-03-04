@@ -5,6 +5,7 @@ import Contact from "../pages/Contact";
 import Error404 from "../pages/Error404";
 import Feature from "../pages/Feature";
 import Home from "../pages/Home";
+import Intro from "../pages/Intro";
 import Lastest from "../pages/Lastest";
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
@@ -21,6 +22,10 @@ export const routes = [
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/intro",
+                element: <Intro />
             }, {
                 path: "categories",
                 element: <Store />
