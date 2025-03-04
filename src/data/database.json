@@ -228,7 +228,9 @@
       "unit": "1.5kg",
       "category": 1,
       "image": "Img/feature_product-1.webp",
-      "rating": 5
+      "rating": 5,
+      "oldPrice": 300000,
+      "newPrice": 250000
     },
     {
       "id": 106,
@@ -237,7 +239,9 @@
       "unit": "700g",
       "category": 6,
       "image": "Img/feature_product-2.webp",
-      "rating": 4.9
+      "rating": 4.9,
+      "oldPrice": 250000,
+      "newPrice": 220000
     },
     {
       "id": 109,
@@ -246,7 +250,9 @@
       "unit": "1 chiếc",
       "category": 9,
       "image": "Img/feature_product-3.webp",
-      "rating": 4.9
+      "rating": 4.9,
+      "oldPrice": 550000,
+      "newPrice": 500000
     },
     {
       "id": 110,
@@ -255,7 +261,9 @@
       "unit": "1 chiếc",
       "category": 9,
       "image": "Img/feature_product-4.webp",
-      "rating": 4.9
+      "rating": 4.9,
+      "oldPrice": 550000,
+      "newPrice": 500000
     }
   ]
 }

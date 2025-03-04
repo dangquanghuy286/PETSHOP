@@ -15,17 +15,17 @@ function Featureproduct() {
         <>
             <section id="feature-product" className="feature-product ">
                 <div className="feature-product__container">
-                    <div className="feature-product__heading">
-                        <h3 className="feature-product__title">Sản Phẩm Nổi Bật</h3>
-                        <div className="feature-product__icon">
+                    <div className="shop-category__header">
+                        <h3 className="shop-category__title">Danh Mục Sản Phẩm</h3>
+                        <div className="shop-category__icon">
                             <i className="fa-solid fa-paw"></i>
                         </div>
                     </div>
-                    <div className="feature-product__list" >
-                        {data.map(item => (
+                    <div className="feature-product__list">
+                        {data.map((item) => (
                             <div className="feature-product__item" key={item.id}>
                                 <div className="feature-product__image">
-                                    <img src={item.image} alt="Thức Ăn Cho Chó Nhỏ" />
+                                    <img src={item.image} alt={item.name} />
                                     <div className="feature-product__tag">-10% Sale</div>
                                     <div className="feature-product__icons">
                                         <i className="fa-solid fa-heart"></i>
@@ -40,21 +40,18 @@ function Featureproduct() {
                                         <i className="fa-solid fa-star"></i>
                                         <i className="fa-solid fa-star"></i>
                                     </div>
-                                    <span className="feature-product__sub-category">Foxic</span>
-                                    <h6 className="feature-product__name">Thức Ăn Cho Chó Nhỏ</h6>
+                                    <span className="feature-product__sub-category">Số lượng:{item.category}</span>
+                                    <h6 className="feature-product__name">{item.name}</h6>
                                     <div className="feature-product__price">
-                                        <del>200.000</del>
-                                        <span>180.000</span>
+                                        <del>{item.oldPrice}đ</del>
+                                        <span>{item.newPrice}đ</span>
                                     </div>
                                     <button className="feature-product__button">Thêm Vào Giỏ Hàng</button>
                                 </div>
                             </div>
                         ))}
-
-
-
-
                     </div>
+
                 </div>
             </section>
 

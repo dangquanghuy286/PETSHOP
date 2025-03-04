@@ -93,12 +93,21 @@
     }
 
     &__name {
-        font-size: 18px;
-        padding: 10px 0;
+        min-height: 50px;
+        /* Đảm bảo tất cả tiêu đề có cùng chiều cao */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
     }
 
     &__price {
-        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-weight: bold;
     }
 
     &__description {
