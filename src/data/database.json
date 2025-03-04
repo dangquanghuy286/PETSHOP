@@ -2,19 +2,23 @@
   "categories": [
     {
       "id": 1,
-      "name": "Thức ăn cho chó"
+      "name": "Thức ăn cho chó",
+      "image": "/Img/dog.webp"
     },
     {
       "id": 2,
-      "name": "Thức ăn cho mèo"
+      "name": "Thức ăn cho mèo",
+      "image": "/Img/cat.webp"
     },
     {
       "id": 3,
-      "name": "Thức ăn cho chim"
+      "name": "Thức ăn cho chim",
+      "image": "/Img/bird.webp"
     },
     {
       "id": 4,
-      "name": "Thức ăn cho thỏ"
+      "name": "Thức ăn cho thỏ",
+      "image": "/Img/rabit.webp"
     },
     {
       "id": 5,
@@ -48,7 +52,7 @@
       "price": 250000,
       "unit": "1.5kg",
       "category": 1,
-      "image": "dog_food_cm5.jpg",
+      "image": "/Img/dogs_food.webp",
       "rating": 5,
       "details": {
         "brand": "Pawsitive Pets",
@@ -69,7 +73,7 @@
       "price": 280000,
       "unit": "1.5kg",
       "category": 2,
-      "image": "cat_food_meo.jpg",
+      "image": "/Img/cats_food.webp",
       "rating": 4.8
     },
     {
@@ -78,7 +82,7 @@
       "price": 280000,
       "unit": "1.5kg",
       "category": 3,
-      "image": "bird_food.jpg",
+      "image": "/Img/a..webp",
       "rating": 4.5
     },
     {
