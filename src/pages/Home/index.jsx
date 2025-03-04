@@ -52,6 +52,31 @@ function Home() {
                 </div>
             </div>
             <HomeLatest />
+            <div className="four-banner">
+                <div className="four-banner__food">
+                    <img src="Img/big_banner_food.webp" alt="" />
+                </div>
+                <div className="four-banner__context--left">
+                    <div>
+                        <h4>Thức Ăn Thật</h4>
+                        <p>Thịt và rau củ cấp độ con người trong các công thức đơn giản, được làm cho chó</p>
+                    </div>
+                    <div>
+                        <h4>MOET</h4>
+                        <p>An toàn và chất lượng chưa từng có trước đây cho thú cưng</p>
+                    </div>
+                </div>
+                <div className="four-banner__context--right">
+                    <div>
+                        <h4>Sản Xuất Tươi Mới</h4>
+                        <p>Giữ Nguyên Thực Phẩm và Dinh Dưỡng</p>
+                    </div>
+                    <div>
+                        <h4>Được Chấp Thuận Bởi Bác Sĩ Thú Y</h4>
+                        <p>Dinh dưỡng vượt qua các tiêu chuẩn ngành công nghiệp cho thú cưng</p>
+                    </div>
+                </div>
+            </div>
 
         </>
 
