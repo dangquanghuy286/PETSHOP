@@ -91,7 +91,7 @@
       "price": 200000,
       "unit": "1kg",
       "category": 4,
-      "image": "rabbit_food_happy.jpg",
+      "image": "/Img/rabitfood.jpg",
       "rating": 4.7,
       "details": {
         "brand": "Bunny Bliss",
@@ -112,7 +112,7 @@
       "price": 150000,
       "unit": "500g",
       "category": 5,
-      "image": "fish_food_feast.jpg",
+      "image": "/Img/fishfood.jpg",
       "rating": 4.6
     },
     {
@@ -121,7 +121,7 @@
       "price": 220000,
       "unit": "700g",
       "category": 6,
-      "image": "turtle_food_treats.jpg",
+      "image": "/Img/turtlefood.jpg",
       "rating": 4.9
     },
     {
@@ -130,7 +130,7 @@
       "price": 180000,
       "unit": "500g",
       "category": 7,
-      "image": "hamster_food_delight.jpg",
+      "image": "/Img/hamsterfood.webp",
       "rating": 4.8
     },
     {
@@ -139,7 +139,7 @@
       "price": 150000,
       "unit": "1 chiếc",
       "category": 8,
-      "image": "dog_leash_comfort.jpg",
+      "image": "/Img/dog_leash_comfort.webp",
       "rating": 4.7
     },
     {
@@ -148,7 +148,7 @@
       "price": 500000,
       "unit": "1 chiếc",
       "category": 9,
-      "image": "cat_house_cozy.jpg",
+      "image": "/Img/cat_house.webp",
       "rating": 4.9
     },
     {
@@ -157,7 +157,7 @@
       "price": 700000,
       "unit": "1 chiếc",
       "category": 10,
-      "image": "bird_cage_deluxe.jpg",
+      "image": "/Img/bird_cage_deluxe.webp",
       "rating": 4.8
     }
   ],

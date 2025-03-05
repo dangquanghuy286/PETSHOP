@@ -6,7 +6,6 @@ import Store_Category from "../Home_Category";
 import "./Home.scss";
 import Featureproduct from "../Home_fea";
 import HomeLatest from "../Home_LastestProduct";
-
 function Home() {
     useEffect(() => {
         // Khởi tạo ScrollReveal với các thiết lập chung cho hiệu ứng cuộn
