@@ -25,7 +25,7 @@ function HomeLatest() {
                             <div className="latest-products__item" key={item.id}>
                                 <div className="latest-products__image">
                                     <img src={item.image} alt={item.name} />
-                                    <div className="latest-products__tag">-10% Sale</div>
+                                    <div className="latest-products__tag">{item.discount}</div>
                                     <div className="latest-products__icons">
                                         <i className="fa-solid fa-heart"></i>
                                         <i className="fa-solid fa-eye"></i>

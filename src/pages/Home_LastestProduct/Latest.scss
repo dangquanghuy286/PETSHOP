@@ -127,6 +127,39 @@
         }
     }
 
+    &__tag {
+        background-color: #ff4d4f; // Màu đỏ nổi bật cho giảm giá
+        color: #fff; // Chữ màu trắng để dễ đọc
+        border-radius: 50%; // Làm tròn 100% để tạo hình tròn
+        width: 45px; // Tăng kích thước để dễ nhìn
+        height: 45px;
+        position: absolute;
+        top: 10px; // Đặt vị trí hợp lý
+        left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px; // Kích thước chữ vừa phải
+        font-weight: bold; // Chữ đậm hơn
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Hiệu ứng đổ bóng đẹp hơn
+        animation: pulse 1.5s infinite; // Hiệu ứng nhấp nháy nhẹ
+
+        // Hiệu ứng nhấp nháy
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+
     /* Product Details */
     &__details {
         text-align: center;
