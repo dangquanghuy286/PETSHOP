@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getProductList } from "../../services/productsService";
 import { getCategoryList } from "../../services/cartegoryService";
 import "./Store.scss";
+import ProductItem from "./StoreItem";
 
 function Store() {
     const [data, setData] = useState([]);
@@ -73,16 +74,7 @@ function Store() {
                         <div className="product-grid">
                             {data.length > 0 ? (
                                 data.map((product) => (
-                                    <div key={product.id} className="product-grid__item">
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            className="product-grid__image"
-                                        />
-                                        <p className="product-grid__name">{product.name}</p>
-                                        <p className="product-grid__price">{product.price}đ</p>
-                                        <button className="product-grid__button">Mua ngay</button>
-                                    </div>
+                                    <ProductItem key={product.id} product={product} />
                                 ))
                             ) : (
                                 <p>Đang tải sản phẩm...</p>
