@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
 import { getfeaList } from "../../services/feaService";
 import "./Feature_product.scss"
+
+import FItem from "./Feature";
 function Featureproduct() {
     const [data, setData] = useState([]);
+
     useEffect(() => {
         const fetchApi = async () => {
             const res = await getfeaList();
@@ -23,32 +26,7 @@ function Featureproduct() {
                     </div>
                     <div className="feature-product__list">
                         {data.map((item) => (
-                            <div className="feature-product__item" key={item.id}>
-                                <div className="feature-product__image">
-                                    <img src={item.image} alt={item.name} />
-                                    <div className="feature-product__tag">{item.discount}</div>
-                                    <div className="feature-product__icons">
-                                        <i className="fa-solid fa-heart"></i>
-                                        <i className="fa-solid fa-eye"></i>
-                                    </div>
-                                </div>
-                                <div className="feature-product__details">
-                                    <div className="feature-product__reviews">
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                        <i className="fa-solid fa-star"></i>
-                                    </div>
-                                    <span className="feature-product__sub-category">Số lượng:{item.category}</span>
-                                    <h6 className="feature-product__name">{item.name}</h6>
-                                    <div className="feature-product__price">
-                                        <del>{item.oldPrice}đ</del>
-                                        <span>{item.newPrice}đ</span>
-                                    </div>
-                                    <button className="feature-product__button">Thêm Vào Giỏ Hàng</button>
-                                </div>
-                            </div>
+                            <FItem key={item.id} item={item} />
                         ))}
                     </div>
 

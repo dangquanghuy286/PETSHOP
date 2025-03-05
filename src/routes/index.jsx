@@ -1,6 +1,7 @@
 
 // import PrivateRoutes from "../components/PrivateRoutes";
 import LayoutDefault from "../layouts/LayoutDefault";
+import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
 import Error404 from "../pages/Error404";
 import Feature from "../pages/Feature";
@@ -56,6 +57,10 @@ export const routes = [
             {
                 path: "logout",
                 element: <Logout />
+            },
+            {
+                path: "cart",
+                element: <Cart />
             },
         ]
     }

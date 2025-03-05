@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./StC.scss"
 import { getProductList } from "../../services/productsService";
 import { getCategoryList } from "../../services/cartegoryService";
+import ICa from "./Category";
 function Store_Category() {
     const [data_List, setData_List] = useState([]);
     const [data_Cata, setData_Cata] = useState([]);
@@ -35,27 +36,7 @@ function Store_Category() {
                     </div>
                     <div className="shop-category__list">
                         {data_List.slice(0, 3).map((item) => (
-                            <div className="shop-category__item" key={item.id}>
-                                <div className="shop-category__image">
-                                    <a href="">
-                                        <img src={item.image} alt={item.name} />
-                                    </a>
-                                    <div className="latest-products__icons">
-                                        <i className="fa-solid fa-heart"></i>
-                                        <i className="fa-solid fa-eye"></i>
-                                    </div>
-                                </div>
-                                <div className="shop-category__details">
-                                    <div className="shop-category__review">
-                                        {[...Array(5)].map((_, i) => (
-                                            <i key={i} className="fa-solid fa-star"></i>
-                                        ))}
-                                    </div>
-                                    <h4 className="shop-category__name">{item.name}</h4>
-                                    <h3 className="shop-category__price">{item.price}đ</h3>
-                                    <button className="shop-category__button">Thêm vào giỏ hàng</button>
-                                </div>
-                            </div>
+                            <ICa key={item.id} item={item} />
                         ))}
                     </div>
                 </div>
