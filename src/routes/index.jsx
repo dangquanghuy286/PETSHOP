@@ -1,6 +1,7 @@
 
 // import PrivateRoutes from "../components/PrivateRoutes";
 import LayoutDefault from "../layouts/LayoutDefault";
+import Blog from "../pages/Blog";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
 import Error404 from "../pages/Error404";
@@ -29,15 +30,19 @@ export const routes = [
                 element: <Intro />
             }, {
                 path: "categories",
-                element: <Store />
-            }, {
-                path: "feature_product",
-                element: <Feature />
+                element: <Store />,
+                children: [
+                    {
+                        path: "feature_product",
+                        element: <Feature />
+                    },
+                    {
+                        path: "lastest_products",
+                        element: <Lastest />
+                    }
+                ]
             },
-            {
-                path: "lastest_products",
-                element: <Lastest />
-            },
+
             {
                 path: "contact",
                 element: <Contact />
@@ -61,6 +66,10 @@ export const routes = [
             {
                 path: "cart",
                 element: <Cart />
+            },
+            {
+                path: "blog",
+                element: <Blog />
             },
         ]
     }

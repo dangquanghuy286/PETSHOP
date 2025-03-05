@@ -57,15 +57,16 @@ function Store() {
                         <p className="sidebar__filter">Giá sản phẩm</p>
                         <ul className="sidebar__filter-list">
                             <li className="sidebar__filter-item">
-                                <input type="checkbox" /> Giá dưới 100.000đ
+                                <input type="radio" name="priceFilter" /> Giá dưới 100.000đ
                             </li>
                             <li className="sidebar__filter-item">
-                                <input type="checkbox" /> 100.000đ - 200.000đ
+                                <input type="radio" name="priceFilter" /> 100.000đ - 200.000đ
                             </li>
                             <li className="sidebar__filter-item">
-                                <input type="checkbox" /> 200.000đ - 300.000đ
+                                <input type="radio" name="priceFilter" /> 200.000đ - 300.000đ
                             </li>
                         </ul>
+
                     </aside>
 
                     {/* Main Content */}
