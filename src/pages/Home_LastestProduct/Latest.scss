@@ -72,7 +72,8 @@
             transform: translateY(-5px);
         }
 
-        &:hover &__icons {
+        &:hover .latest-products__icons {
+            right: 10px;
             opacity: 1;
         }
     }
@@ -93,6 +94,36 @@
             &:hover {
                 transform: scale(0.9);
             }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 17px;
+        right: -150px;
+        opacity: 0;
+        /* Mặc định ẩn */
+        transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+        i {
+            width: 30px;
+            height: 30px;
+            padding: 15px;
+            background-color: rgba(128, 128, 128, 0.1);
+            text-align: center;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        i:hover {
+            background-color: rgba(128, 128, 128, 0.3);
         }
     }
 
@@ -144,16 +175,18 @@
     }
 
     &__button {
-        background-color: #57aa5e;
-        color: white;
+        background-color: #ffd80a;
+        color: rgb(0, 0, 0);
         padding: 8px 12px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         margin-top: 10px;
+        font-weight: bold;
 
         &:hover {
-            background-color: #4a9452;
+            background-color: #000;
+            color: #fff;
         }
     }
 }

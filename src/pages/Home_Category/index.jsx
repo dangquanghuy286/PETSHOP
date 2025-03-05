@@ -40,6 +40,10 @@ function Store_Category() {
                                     <a href="">
                                         <img src={item.image} alt={item.name} />
                                     </a>
+                                    <div className="latest-products__icons">
+                                        <i className="fa-solid fa-heart"></i>
+                                        <i className="fa-solid fa-eye"></i>
+                                    </div>
                                 </div>
                                 <div className="shop-category__details">
                                     <div className="shop-category__review">
@@ -48,8 +52,7 @@ function Store_Category() {
                                         ))}
                                     </div>
                                     <h4 className="shop-category__name">{item.name}</h4>
-                                    <h3 className="shop-category__price">{item.price} VND</h3>
-                                    <p className="shop-category__description">{item.detail}</p>
+                                    <h3 className="shop-category__price">{item.price}đ</h3>
                                     <button className="shop-category__button">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>

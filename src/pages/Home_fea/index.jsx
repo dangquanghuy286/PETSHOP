@@ -26,7 +26,7 @@ function Featureproduct() {
                             <div className="feature-product__item" key={item.id}>
                                 <div className="feature-product__image">
                                     <img src={item.image} alt={item.name} />
-                                    <div className="feature-product__tag">-10% Sale</div>
+                                    <div className="feature-product__tag">{item.discount}</div>
                                     <div className="feature-product__icons">
                                         <i className="fa-solid fa-heart"></i>
                                         <i className="fa-solid fa-eye"></i>

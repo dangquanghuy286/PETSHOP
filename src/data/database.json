@@ -201,7 +201,8 @@
       "image": "/Img/latest_product-1.webp",
       "rating": 4.8,
       "oldPrice": 800000,
-      "newPrice": 700000
+      "newPrice": 700000,
+      "discount": "12.5%"
     },
     {
       "id": 109,
@@ -212,7 +213,8 @@
       "image": "/Img/latest_product-2.webp",
       "rating": 4.9,
       "oldPrice": 550000,
-      "newPrice": 500000
+      "newPrice": 500000,
+      "discount": "9.1%"
     },
     {
       "id": 108,
@@ -223,7 +225,8 @@
       "image": "/Img/latest_product-3.webp",
       "rating": 4.7,
       "oldPrice": 180000,
-      "newPrice": 150000
+      "newPrice": 150000,
+      "discount": "16.7%"
     }
   ],
   "featured_products": [
@@ -236,7 +239,8 @@
       "image": "Img/feature_product-1.webp",
       "rating": 5,
       "oldPrice": 300000,
-      "newPrice": 250000
+      "newPrice": 250000,
+      "discount": "16.7%"
     },
     {
       "id": 106,
@@ -247,7 +251,8 @@
       "image": "Img/feature_product-2.webp",
       "rating": 4.9,
       "oldPrice": 250000,
-      "newPrice": 220000
+      "newPrice": 220000,
+      "discount": "12%"
     },
     {
       "id": 109,
@@ -258,7 +263,8 @@
       "image": "Img/feature_product-3.webp",
       "rating": 4.9,
       "oldPrice": 550000,
-      "newPrice": 500000
+      "newPrice": 500000,
+      "discount": "9.1%"
     },
     {
       "id": 110,
@@ -269,7 +275,8 @@
       "image": "Img/feature_product-4.webp",
       "rating": 4.9,
       "oldPrice": 550000,
-      "newPrice": 500000
+      "newPrice": 500000,
+      "discount": "9.1%"
     }
   ]
 }

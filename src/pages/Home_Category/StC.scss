@@ -45,44 +45,92 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
-        padding: 40px 0;
-        margin: 0 20px;
+        gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        .feature-product__list {
+            justify-content: center;
+        }
     }
 
     &__item {
-        width: 25%;
         background-color: #fff;
-        box-shadow: 0 0 50px rgba(0 0 0 / 5%);
-        border-radius: 12px;
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
         overflow: hidden;
-        display: flex;
-        justify-content: space-between;
+        width: calc(25% - 15px);
+        min-width: 200px;
+        position: relative;
+        transition: transform 0.3s;
+        margin-top: 30px;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        &:hover .latest-products__icons {
+            right: 10px;
+            opacity: 1;
+        }
     }
 
     &__image {
-        width: 200px;
+        width: 100%;
         height: 200px;
-        overflow: hidden; // Tránh ảnh bị tràn ra ngoài khi scale
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transition: transform 0.3s ease-in-out; // Thêm hiệu ứng mượt
+            transition: transform 0.4s ease-in-out;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(0.9);
             }
         }
     }
 
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 17px;
+        right: -150px;
+        opacity: 0;
+        /* Mặc định ẩn */
+        transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+        i {
+            width: 30px;
+            height: 30px;
+            padding: 15px;
+            background-color: rgba(128, 128, 128, 0.1);
+            text-align: center;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        i:hover {
+            background-color: rgba(128, 128, 128, 0.3);
+        }
+    }
+
+
 
     &__details {
-        padding-left: 25px;
-        padding-top: 15px;
-        margin-right: 20px;
+        text-align: center;
+        padding: 15px;
     }
 
     &__review {
@@ -110,26 +158,27 @@
         justify-content: center;
         gap: 10px;
         font-weight: bold;
+
+        del {
+            color: gray;
+        }
+
+        span {
+            color: #57aa5e;
+        }
     }
 
-    &__description {
-        font-size: 15px;
-        color: gray;
-        line-height: 1.7;
-        padding: 16px 0;
-        padding-right: 15px;
-    }
+
 
     &__button {
-        margin: 15px 0;
-        background: #ffd80a;
+        background-color: #ffd80a;
+        color: rgb(0, 0, 0);
+        padding: 8px 12px;
         border: none;
-        font-size: 14px;
-        font-weight: 600;
-        padding: 10px 15px;
-        border-radius: 3px;
-        transition: 0.3s;
+        border-radius: 5px;
         cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
 
         &:hover {
             background-color: #000;
