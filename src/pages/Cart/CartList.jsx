@@ -8,8 +8,6 @@ function CartList() {
             <div className="cart">
                 {cart.map(item => (
                     <CartItem item={item} key={item.id} />
-
-
                 ))}
 
             </div>

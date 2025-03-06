@@ -29,7 +29,16 @@ function Cart() {
 
                     </>
                 ) : (
-                    <>Giỏ Hàng Trống...</>
+                    <>
+                        <div className="cartEmpty">
+                            <div className="cartEmpty__Title">
+                                <h3>Giỏ hàng trống ... </h3>
+                            </div>
+                            <div className="cartEmpty__Image">
+                                <img src="./Img/nocart.png" alt="Gio hang trong" />
+                            </div>
+                        </div>
+                    </>
                 )}
             </div>
 
