@@ -18,7 +18,7 @@ function LayoutDefault() {
                         <li><NavLink to="/intro">Giới thiệu</NavLink></li>
                         <li>
                             <NavLink to="/categories">Cửa Hàng</NavLink>
-                            <ul>
+                            <ul className="layout-default__menu__submenu">
                                 <li><NavLink to="/categories/feature_product">Sản Phẩm Nổi Bật</NavLink></li>
                                 <li><NavLink to="/categories/lastest_products">Sản Phẩm Mới Nhất</NavLink></li>
                             </ul>

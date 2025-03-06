@@ -13,6 +13,10 @@ import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 import Register from "../pages/Register";
 import Store from "../pages/Store";
+import StoreAll from "../pages/Store/StoreALL";
+import Detail from "../pages/Store/StoreDetail";
+import StoreFeature from "../pages/Store/StroreFea";
+import StoreLatest from "../pages/Store/StroreLatest";
 
 
 
@@ -33,12 +37,20 @@ export const routes = [
                 element: <Store />,
                 children: [
                     {
+                        index: true,
+                        element: <StoreAll />
+                    },
+                    {
                         path: "feature_product",
-                        element: <Feature />
+                        element: <StoreFeature />
                     },
                     {
                         path: "lastest_products",
-                        element: <Lastest />
+                        element: <StoreLatest />
+                    },
+                    {
+                        path: ":id",
+                        element: <Detail />
                     }
                 ]
             },

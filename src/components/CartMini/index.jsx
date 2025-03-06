@@ -7,9 +7,7 @@ function CartMini() {
     const total = cart.reduce((sum, item) => {
         return sum + item.quantity
     }, 0)
-    console.log(cart);
 
-    console.log(total);
 
     return (
         <><Link to="/cart">

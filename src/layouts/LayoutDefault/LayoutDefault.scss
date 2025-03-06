@@ -69,10 +69,14 @@ li {
     &__menu {
         ul {
             display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         li {
             padding: 0 20px;
+            position: relative;
         }
 
 
@@ -88,6 +92,42 @@ li {
             white-space: nowrap; // Ngăn ngắt dòng, giữ liên kết trên một dòng
             display: block; // Hiển thị liên kết dưới dạng block (cho phép click toàn bộ vùng)
             padding: 4px 10px; // Thêm khoảng cách bên trong cho liên kết
+        }
+
+        &__submenu {
+            position: absolute; // Định vị tuyệt đối so với phần tử cha (li)
+            top: 100%; // Đặt submenu ngay dưới phần tử cha (100% chiều cao của phần tử cha)
+
+            left: -50%;
+            background: #ffffff; // Nền màu orangered cho submenu
+            flex-direction: column; // Sắp xếp các mục trong submenu theo cột
+            display: none !important; // Ẩn submenu theo mặc định (sử dụng !important để ưu tiên)
+            min-width: 150px; // Đặt chiều rộng tối thiểu cho submenu
+
+
+            // Định dạng các mục <li> bên trong submenu
+            li {
+                margin-left: 0 !important; // Loại bỏ khoảng cách bên trái cho các mục con (ưu tiên !important)
+
+                // Định dạng liên kết <a> bên trong các mục của submenu
+                a {
+                    padding: 8px 10px; // Thêm khoảng cách bên trong cho các liên kết trong submenu
+                    display: block; // Hiển thị liên kết dưới dạng block
+                    color: rgb(0, 0, 0); // Đặt màu chữ mặc định cho submenu là trắng
+                    text-align: left; // Căn trái nội dung văn bản
+
+                    // Chỉ thay đổi màu của liên kết khi hover trực tiếp vào liên kết đó
+                    &:hover {
+                        color: black; // Đổi màu thành đen khi hover vào liên kết
+                    }
+                }
+            }
+        }
+
+        // Hiển thị dropdown submenu khi hover vào phần tử li chứa nó
+        li:hover .layout-default__menu__submenu {
+            display: flex !important; // Khi hover vào li, hiển thị submenu với layout flex (ưu tiên !important)
+
         }
     }
 
@@ -224,4 +264,269 @@ li {
     }
 
 
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .layout-default {
+        // &__header {
+        //     padding: 10px 20px;
+        //     flex-direction: row; // Giữ hàng ngang nhưng wrap nếu cần
+        //     flex-wrap: wrap;
+        //     justify-content: space-between;
+        //     align-items: center;
+        // }
+
+        // &__logo {
+        //     flex: 0 0 150px; // Giữ kích thước cố định cho logo
+        //     max-width: 150px;
+
+        //     img {
+        //         width: 100%;
+        //         height: auto;
+        //         object-fit: contain; // Đảm bảo logo không bị méo
+        //     }
+        // }
+
+        // &__menu {
+        //     flex: 1;
+        //     min-width: 0; // Ngăn menu bị tràn gây méo
+
+        //     ul {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: 10px;
+        //         width: 100%;
+        //         text-align: center;
+
+        //         li {
+        //             padding: 8px 0;
+        //         }
+
+        //         &__submenu {
+        //             position: static;
+        //             display: none !important;
+        //             background: var(--grey1);
+        //             padding: 10px 0 10px 20px;
+        //             width: 100%; // Chiếm toàn bộ chiều rộng
+        //         }
+
+        //         li:hover &__submenu {
+        //             display: flex !important;
+        //         }
+        //     }
+        // }
+
+        &__footer-section1 {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        &__footer-section2 {
+            flex-direction: column;
+            margin: 0 20px;
+            gap: 30px;
+            align-items: center;
+        }
+
+        &__introduce,
+        &__policy,
+        &__touch {
+            width: 100%;
+            max-width: 500px; // Giới hạn tối đa để không bị quá rộng
+            margin-right: 0;
+            text-align: center;
+        }
+
+        &__section1-block2 {
+            width: 100%;
+            max-width: 400px; // Giới hạn để không bị méo
+            display: flex;
+            flex-direction: row; // Giữ input và span ngang
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .layout-default {
+        // &__header {
+        //     flex-direction: column;
+        //     padding: 10px;
+        //     align-items: center;
+        // }
+
+        // &__logo {
+        //     flex: 0 0 120px;
+        //     max-width: 120px;
+        //     margin-bottom: 10px;
+
+        //     img {
+        //         width: 100%;
+        //         height: auto;
+        //         object-fit: contain;
+        //     }
+        // }
+
+        // &__menu {
+        //     width: 100%;
+        //     margin: 10px 0;
+
+        //     ul {
+        //         display: none; // Ẩn menu, có thể toggle bằng JS
+        //         flex-direction: column;
+        //         background: var(--grey1);
+        //         padding: 10px 0;
+        //         width: 100%;
+
+        //         li {
+        //             padding: 8px 0;
+
+        //             a {
+        //                 padding: 8px 15px;
+        //             }
+        //         }
+
+        //         &__submenu {
+        //             padding-left: 20px;
+        //             width: 100%;
+        //         }
+        //     }
+
+        //     &.menu-active ul {
+        //         display: flex !important; // Toggle menu nếu cần
+        //     }
+        // }
+
+        // &__account,
+        // &__right {
+        //     width: 100%;
+        //     text-align: center;
+        //     margin: 5px 0;
+        // }
+
+        &__footer {
+            padding: 15px;
+
+            &__footer-section1 {
+                padding: 15px 0;
+            }
+
+            &__section1-block2 {
+                flex-direction: column; // Chuyển sang cột để không méo
+                width: 100%;
+                max-width: 300px; // Giới hạn chiều rộng
+                gap: 10px;
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    margin-right: 0;
+                }
+
+                span {
+                    width: 100%;
+                    height: 40px;
+                }
+            }
+
+            &__introduce img {
+                width: 140px;
+                height: auto;
+                object-fit: contain; // Giữ tỷ lệ ảnh
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .layout-default {
+        // &__header {
+        //     padding: 5px;
+        // }
+
+        // &__logo {
+        //     flex: 0 0 100px;
+        //     max-width: 100px;
+
+        //     img {
+        //         width: 100%;
+        //         height: auto;
+        //         object-fit: contain;
+        //     }
+        // }
+
+        // &__menu {
+        //     ul {
+        //         li {
+        //             padding: 5px 0;
+
+        //             a {
+        //                 padding: 5px 10px;
+        //                 font-size: 1.4rem;
+        //             }
+        //         }
+
+        //         &__submenu {
+        //             min-width: 100%; // Đảm bảo submenu chiếm toàn bộ chiều rộng
+        //         }
+        //     }
+        // }
+
+        &__footer {
+            font-size: 1.4rem;
+
+            &__section1-block1,
+            &__section1-block3 {
+                img {
+                    width: 20px;
+                    height: auto;
+                }
+            }
+
+            &__section1-block2 {
+                max-width: 250px;
+
+                input {
+                    height: 35px;
+                }
+
+                span {
+                    height: 35px;
+                    font-size: 1.4rem;
+                }
+            }
+
+            &__introduce,
+            &__policy,
+            &__touch {
+                h2 {
+                    font-size: 1.8rem;
+                }
+
+                p,
+                li {
+                    font-size: 1.4rem;
+                }
+
+                img {
+                    width: 120px;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            &__cover-contact {
+                img {
+                    width: 16px;
+                    height: auto;
+                }
+            }
+
+            &__copyRight {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
