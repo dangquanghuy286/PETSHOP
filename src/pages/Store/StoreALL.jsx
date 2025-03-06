@@ -33,7 +33,7 @@ function StoreAll() {
             <section className="section-1">
                 <div className="banner">
                     <div className="banner__text">
-                        <p className="banner__sale">PET-SHOP GIẢM ĐẾN 50%</p>
+                        <p className="banner__sale">GIẢM ĐẾN 50%</p>
                     </div>
                 </div>
             </section>
@@ -70,7 +70,6 @@ function StoreAll() {
 
                     {/* Main Content */}
                     <main className="main-content">
-                        <h2 className="main-content__title">Sản phẩm</h2>
                         <div className="product-grid">
                             {data.length > 0 ? (
                                 data.map((product) => (
