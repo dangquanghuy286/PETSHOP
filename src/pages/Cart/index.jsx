@@ -24,7 +24,7 @@ function Cart() {
                     <>
                         <CartList />
                         <div className="cart__total">
-                            Tổng tiền : <span>{total.toLocaleString("vi-VN")}đ</span>
+                            Tổng tiền : <span>{total.toLocaleString("vi-VN")} VNĐ</span>
                         </div>
 
                     </>

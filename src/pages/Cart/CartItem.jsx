@@ -49,14 +49,14 @@ function CartItem(props) {
                     {/* Hiển thị giá mới sau khi áp dụng giảm giá, nếu có discount */}
                     <div className="cart__price-new">
                         {item.info.discount ?
-                            ((item.info.price * (100 - item.info.discount)) / 100).toFixed(2) :
-                            item.info.price}
+                            ((item.info.price * (100 - item.info.discount)) / 100).toLocaleString("vi-VN") :
+                            item.info.price.toLocaleString("vi-VN")}
                     </div>
 
                     {/* Hiển thị giá gốc nếu có giảm giá */}
                     {item.info.discount && (
                         <div className="cart__price-old">
-                            {item.info.price}
+                            {item.info.price.toLocaleString("vi-VN")}
                         </div>
                     )}
                 </div>
