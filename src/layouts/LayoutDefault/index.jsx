@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "./LayoutDefault.scss"
 
 import CartMini from "../../components/CartMini";
@@ -29,21 +29,19 @@ function LayoutDefault() {
                     </ul>
                 </div>
 
-                <div className="layout-default__account">
-                    {/* {token ? (
-                        <NavLink to="/logout">Đăng xuất</NavLink>
-                    ) : (
-                        <>
-                            <NavLink to="/login">Đăng nhập</NavLink>
-                            <NavLink to="/register">Đăng ký</NavLink>
-                        </>
-                    )} */}
-                    111
-                </div>
-                <div className="layout-default__right">
+                <div className="layout-default__action">
+                    <div className="layout-default__search">
+                        <input type="text" placeholder="Tìm kiếm..." />
+                        <img src="Img/icons-search.svg" alt="Search" />
+                    </div>
                     <div className="layout-default__cart">
-                        {/* <Cart /> */}
-                        <CartMini />
+                        <div className="layout-default__cart-icon">
+                            <CartMini />
+                        </div>
+                    </div>
+                    <div className="layout-default__account">
+                        <NavLink to="/login">Đăng Nhập</NavLink>
+                        <NavLink to="/register">Đăng Ký</NavLink>
                     </div>
                 </div>
             </header>
@@ -99,8 +97,8 @@ function LayoutDefault() {
                             <img src="Img/email.svg" alt="Email" />
                             <p>foxicshop2024@gmail.com</p>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
                 <div className="layout-default__copyRight">Copy Right @2025 by Quang Huy </div>
             </footer>

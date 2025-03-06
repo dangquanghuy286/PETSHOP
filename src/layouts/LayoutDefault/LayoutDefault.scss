@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     --white: #fff;
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
     background-color: var(--white);
     color: var(--black);
@@ -56,6 +56,7 @@ li {
         z-index: 999;
         /* Đảm bảo phần tử luôn hiển thị trên các thành phần khác */
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        background: var(--white);
     }
 
     &__logo {
@@ -77,12 +78,15 @@ li {
         li {
             padding: 0 20px;
             position: relative;
+
+
         }
 
 
         a {
             color: black; // Đặt màu chữ mặc định là đen
             text-decoration: none; // Loại bỏ gạch chân mặc định của liên kết
+            position: relative; // Định vị tương đối cho liên kết
 
             // Khi liên kết có class "active" (ví dụ, khi sử dụng NavLink của React Router)
             &.active {
@@ -92,6 +96,24 @@ li {
             white-space: nowrap; // Ngăn ngắt dòng, giữ liên kết trên một dòng
             display: block; // Hiển thị liên kết dưới dạng block (cho phép click toàn bộ vùng)
             padding: 4px 10px; // Thêm khoảng cách bên trong cho liên kết
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #ffd80a;
+                transition: 0.5s;
+
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+
+
         }
 
         &__submenu {
@@ -129,6 +151,100 @@ li {
             display: flex !important; // Khi hover vào li, hiển thị submenu với layout flex (ưu tiên !important)
 
         }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .layout-default__search {
+            flex: 1;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            padding: 0 10px;
+            position: relative;
+
+            input {
+
+                height: 40px;
+                width: 40px;
+                max-width: 100%;
+                border-radius: 100px;
+                background-color: rgba(255, 255, 255, 0.1);
+                border: 5px solid #ffd80a;
+                color: #000;
+                padding-left: 15px; // Added for text spacing
+                transition: width 1.2s ease-in-out, opacity 1s ease-in-out; // Smoother transition
+                text-align: center;
+                outline: none;
+
+                &::placeholder {
+                    color: #000000;
+                    opacity: 0;
+                    transition: opacity 0.8s ease-in-out;
+                }
+
+                &:hover,
+                &:focus {
+                    min-width: 140px;
+
+                    &::placeholder {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 20px; // Adjusted for better alignment
+                top: 50%; // Center vertically
+                transform: translateY(-50%); // Precise centering
+                width: 20px; // Assuming an icon size—adjust as needed
+                height: 20px;
+
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+
+        .layout-default__cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                /* Phóng to nhẹ khi hover */
+            }
+
+            .layout-default__cart-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 40px;
+                /* Tăng kích thước icon */
+                height: 40px;
+                transition: transform 0.3s ease-in-out;
+
+
+                &:hover {
+                    transform: rotate(10deg);
+                    /* Hiệu ứng lắc nhẹ */
+                }
+            }
+        }
+
     }
 
     &__footer {
