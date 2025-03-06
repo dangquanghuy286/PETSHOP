@@ -86,7 +86,7 @@ li {
 
             // Khi liên kết có class "active" (ví dụ, khi sử dụng NavLink của React Router)
             &.active {
-                color: #ffd80a; // Đổi màu chữ thành aliceblue khi active
+                color: #ffd500;
             }
 
             white-space: nowrap; // Ngăn ngắt dòng, giữ liên kết trên một dòng
@@ -98,8 +98,8 @@ li {
             position: absolute; // Định vị tuyệt đối so với phần tử cha (li)
             top: 100%; // Đặt submenu ngay dưới phần tử cha (100% chiều cao của phần tử cha)
 
-            left: -50%;
-            background: #ffffff; // Nền màu orangered cho submenu
+            left: -33%;
+            background: #ffffff;
             flex-direction: column; // Sắp xếp các mục trong submenu theo cột
             display: none !important; // Ẩn submenu theo mặc định (sử dụng !important để ưu tiên)
             min-width: 150px; // Đặt chiều rộng tối thiểu cho submenu
@@ -118,7 +118,7 @@ li {
 
                     // Chỉ thay đổi màu của liên kết khi hover trực tiếp vào liên kết đó
                     &:hover {
-                        color: black; // Đổi màu thành đen khi hover vào liên kết
+                        color: #ffd80a; // Đổi màu thành đen khi hover vào liên kết
                     }
                 }
             }
