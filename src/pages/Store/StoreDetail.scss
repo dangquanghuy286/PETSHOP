@@ -1,0 +1,213 @@
+// Biến màu sắc và khoảng cách
+$primary-color: #ffd80a; // Màu chính
+$text-color: #333; // Màu chữ chính
+$secondary-color: #888; // Màu phụ
+$border-color: #ddd; // Màu viền
+$background-light: #f0f0f0; // Màu nền sáng
+$spacing: 20px; // Khoảng cách cơ bản
+$border-radius: 8px; // Bo góc
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Đổ bóng nhẹ
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__image {
+        flex: 1 1 300px; // Chiếm ít nhất 300px, co giãn linh hoạt
+        max-width: 400px;
+
+        &-src {
+            width: 100%;
+            height: auto;
+            max-height: 400px; // Giới hạn chiều cao ảnh
+            object-fit: contain; // Giữ tỷ lệ ảnh
+            border-radius: $border-radius;
+            transition: transform 0.3s ease; // Hiệu ứng zoom
+
+            &:hover {
+                transform: scale(1.05); // Phóng to nhẹ khi hover
+            }
+        }
+    }
+
+    &__info {
+        flex: 1 1 300px; // Co giãn linh hoạt
+        padding: 10px;
+
+        &-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $text-color;
+            margin-bottom: 10px;
+        }
+
+        &-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $primary-color;
+            margin: 8px 0;
+        }
+
+        &-unit,
+        &-category,
+        &-rating {
+            font-size: 1.4rem;
+            color: $secondary-color;
+            margin: 4px 0;
+        }
+
+        &-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            &::after {
+                content: "⭐";
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__details {
+        flex: 1 1 100%; // Chiếm toàn bộ chiều rộng ở dòng dưới
+        padding: 10px;
+
+        &-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $text-color;
+            margin-bottom: 10px;
+            border-bottom: 2px solid $primary-color; // Dòng kẻ dưới tiêu đề
+            padding-bottom: 8px;
+        }
+
+        &-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.4rem;
+            color: $text-color;
+
+            .product-detail__details-item {
+                margin-bottom: 12px;
+
+                strong {
+                    color: $secondary-color;
+                    font-weight: 600;
+                }
+            }
+
+            &-sublist {
+                list-style: disc;
+                padding-left: 20px;
+                margin: 8px 0;
+
+                .product-detail__details-subitem {
+                    font-size: 1.3rem;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        flex: 1 1 100%; // Chiếm toàn bộ chiều rộng
+        text-align: center;
+
+        &-btn {
+            padding: 12px 24px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            border: none;
+            border-radius: $border-radius;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+
+            &--add-to-cart {
+                background: $primary-color;
+                color: white;
+
+                &:hover {
+                    background: $primary-color;
+                    transform: translateY(-2px); // Nâng nhẹ khi hover
+                }
+
+                &:active {
+                    transform: translateY(0); // Trở lại vị trí ban đầu khi nhấn
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column;
+        padding: 10px;
+
+        &__image {
+            max-width: 100%;
+        }
+
+        &__info {
+            padding: 0;
+        }
+
+        &__details {
+            padding: 0;
+        }
+
+        &__actions {
+            margin-top: $spacing;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .product-detail {
+        &__info {
+            &-name {
+                font-size: 1.8rem;
+            }
+
+            &-price {
+                font-size: 1.6rem;
+            }
+
+            &-unit,
+            &-category,
+            &-rating {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__details {
+            &-title {
+                font-size: 1.6rem;
+            }
+
+            &-list {
+                font-size: 1.2rem;
+
+                .product-detail__details-sublist {
+                    .product-detail__details-subitem {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+
+        &__actions {
+            &-btn {
+                padding: 10px 20px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

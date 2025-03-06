@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
-
+import "./StoreDetail.scss"
 // StoreDetailAll.jsx
 function StoreDetailAll({ item }) {
     const cart = useSelector(state => state.cartReducer);
