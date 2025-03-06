@@ -31,7 +31,7 @@ function ICa(props) {
                     ))}
                 </div>
                 <h4 className="shop-category__name">{item.name}</h4>
-                <h3 className="shop-category__price">{item.price}đ</h3>
+                <h3 className="shop-category__price">{item.price.toLocaleString("vi-VN")} VNĐ</h3>
                 <button onClick={handleAddtocart} className="shop-category__button">Thêm vào giỏ hàng</button>
             </div>
         </div></>
