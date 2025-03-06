@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
 import "./StoreDetail.scss"
+import GoBack from "../../components/GoBack/Goback";
 // StoreDetailAll.jsx
 function StoreDetailAll({ item }) {
     const cart = useSelector(state => state.cartReducer);
@@ -51,6 +52,7 @@ function StoreDetailAll({ item }) {
                     Thêm vào giỏ hàng
                 </button>
             </div>
+            <GoBack />
         </div>
     );
 }
