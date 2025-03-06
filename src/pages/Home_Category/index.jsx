@@ -3,6 +3,7 @@ import "./StC.scss"
 import { getProductList } from "../../services/productsService";
 import { getCategoryList } from "../../services/cartegoryService";
 import ICa from "./Category";
+import { Link } from "react-router-dom";
 function Store_Category() {
     const [data_List, setData_List] = useState([]);
     const [data_Cata, setData_Cata] = useState([]);
@@ -36,7 +37,7 @@ function Store_Category() {
                     </div>
                     <div className="shop-category__list">
                         {data_List.slice(0, 3).map((item) => (
-                            <ICa key={item.id} item={item} />
+                            <ICa item={item} key={item.id} />
                         ))}
                     </div>
                 </div>

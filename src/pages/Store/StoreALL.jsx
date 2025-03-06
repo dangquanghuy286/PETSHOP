@@ -74,15 +74,12 @@ function StoreAll() {
                         <div className="product-grid">
                             {data.length > 0 ? (
                                 data.map((product) => (
-                                    <Link key={product.id} to={"/categories/" + product.id}>
-                                        <ProductItem product={product} />
-                                    </Link>
+                                    <Link key={product.id} to={"/categories/" + product.id}><ProductItem product={product} /></Link>
                                 ))
                             ) : (
                                 <p>Đang tải sản phẩm...</p>
                             )}
                         </div>
-
 
                     </main>
                 </div>

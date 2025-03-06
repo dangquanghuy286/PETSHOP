@@ -16,9 +16,9 @@ function ICa(props) {
     return (
         <> <div className="shop-category__item" key={item.id}>
             <div className="shop-category__image">
-                <a href="">
-                    <img src={item.image} alt={item.name} />
-                </a>
+
+                <img src={item.image} alt={item.name} />
+
                 <div className="latest-products__icons">
                     <i className="fa-solid fa-heart"></i>
                     <i className="fa-solid fa-eye"></i>

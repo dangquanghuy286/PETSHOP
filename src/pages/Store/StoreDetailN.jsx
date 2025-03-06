@@ -26,7 +26,7 @@ function StoreDetailAll({ item }) {
                 <p className="product-detail__info-category">
                     Danh mục: {item.category === 1 ? "Thức ăn cho chó" : "Khác"}
                 </p>
-                <p className="product-detail__info-rating">Đánh giá: {item.rating} ⭐</p>
+                <p className="product-detail__info-rating">Đánh giá: {item.rating} </p>
             </div>
             <div className="product-detail__details">
                 <h3 className="product-detail__details-title">Thông tin chi tiết</h3>
