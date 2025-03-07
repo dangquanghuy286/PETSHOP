@@ -167,6 +167,7 @@ li {
             border-radius: 5px;
             padding: 0 10px;
             position: relative;
+            cursor: pointer;
 
             input {
 
@@ -245,6 +246,28 @@ li {
             }
         }
 
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        /* Tạo khoảng cách giữa các phần tử */
+        a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            /* Khoảng cách giữa icon và chữ */
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+
+            &:hover {
+                color: #fbc02d;
+                /* Màu khi hover */
+            }
+        }
     }
 
     &__footer {

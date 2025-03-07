@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import CartMini from "../../components/CartMini";
 import { getCookie, deleteCookie } from "../../helpers/cookie"; // Thêm hàm deleteCookie
 import { useSelector } from "react-redux";
+import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 
 function Header() {
     const [token, setToken] = useState(getCookie("token")); // Lưu trạng thái token
@@ -71,8 +72,8 @@ function Header() {
                         <NavLink to="/" onClick={handleLogout}>Đăng Xuất</NavLink>
                     ) : (
                         <>
-                            <NavLink to="/login">Đăng Nhập</NavLink>
-                            <NavLink to="/register">Đăng Ký</NavLink>
+                            <NavLink to="/login"><FaSignInAlt />Đăng Nhập</NavLink>
+                            <NavLink to="/register"><FaUserPlus />Đăng Ký</NavLink>
                         </>
                     )}
                 </div>
