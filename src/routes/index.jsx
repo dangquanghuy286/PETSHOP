@@ -1,5 +1,6 @@
 
 // import PrivateRoutes from "../components/PrivateRoutes";
+import PrivateRoutes from "../components/PrivateRoutes";
 import LayoutDefault from "../layouts/LayoutDefault";
 import Blog from "../pages/Blog";
 import Cart from "../pages/Cart";
@@ -75,14 +76,21 @@ export const routes = [
                 path: "logout",
                 element: <Logout />
             },
-            {
-                path: "cart",
-                element: <Cart />
-            },
+
             {
                 path: "blog",
                 element: <Blog />
             },
+            {
+                element: <PrivateRoutes />,
+                children: [
+                    {
+                        path: "cart",
+                        element: <Cart />
+                    }
+                ]
+
+            }
         ]
     }
 ]

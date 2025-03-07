@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "./Latest.scss"
-import { getLatest } from "../../services/cartegoryService copy";
+import { getLatest } from "../../services/latestService";
 import LatestPd from "./Last";
 function HomeLatest() {
     const [data, setData] = useState([]);

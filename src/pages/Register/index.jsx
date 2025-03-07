@@ -1,7 +1,7 @@
 function Register() {
     return (
         <>
-            page Register
+            <div id="register" className="register"></div>
         </>
     )
 }

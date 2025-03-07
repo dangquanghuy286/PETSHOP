@@ -250,18 +250,6 @@
       }
     }
   ],
-  "special_offers": [
-    {
-      "title": "Khuyến mãi lớn lên đến 50%",
-      "description": "Chỉ trong hôm nay",
-      "image": "sale_50.jpg"
-    },
-    {
-      "title": "Nhận thêm 10% giảm giá",
-      "description": "Ưu đãi đặc biệt",
-      "image": "sale_10.jpg"
-    }
-  ],
   "company_info": [
     {
       "name": "Foxic Pet Store",
@@ -366,6 +354,43 @@
       "oldPrice": 550000,
       "newPrice": 500000,
       "discount": 9.1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "john_doe@example.com",
+      "fullname": "John Doe",
+      "password": "password123",
+      "token": "abc123xyz789def456ghi000"
+    },
+    {
+      "id": 2,
+      "email": "jane_smith@example.com",
+      "fullname": "Jane Smith",
+      "password": "kittycat2023",
+      "token": "def456ghi789jkl012mno345"
+    },
+    {
+      "id": 3,
+      "email": "pet_lover@example.com",
+      "fullname": "Pet Lover",
+      "password": "ilovemypets",
+      "token": "ghi789jkl012mno345pqr678"
+    },
+    {
+      "id": 4,
+      "email": "dog_owner@example.com",
+      "fullname": "Dog Owner",
+      "password": "woofwoof",
+      "token": "jkl012mno345pqr678stu901"
+    },
+    {
+      "id": 5,
+      "email": "cat_queen@example.com",
+      "fullname": "Cat Queen",
+      "password": "meowmeow123",
+      "token": "mno345pqr678stu901vwx234"
     }
   ]
 }
