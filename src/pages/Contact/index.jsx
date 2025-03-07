@@ -1,5 +1,38 @@
+import { feedbackUseLogin } from "../../services/contactService";
 import "./Contact.scss"
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 function Contact() {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const name = e.target[0].value;
+        const email = e.target[1].value;
+        const phone = e.target[2].value;
+        const content = e.target[3].value;
+
+
+        const options = {
+            "fullName": name,
+            "email": email,
+            "phone": phone,
+            "message": content,
+            "timestamp": new Date().toISOString()
+        };
+        const res = await feedbackUseLogin(options);
+        if (res) {
+            Swal.fire({
+                title: "Gửi thông tin thành công!",
+                background: "#fff9c4", // Màu nền vàng nhạt
+                color: "#4caf50", // Màu chữ xanh lá cây
+                confirmButtonColor: "#4caf50", // Màu nút xác nhận (xanh lá)
+                icon: "success",
+                draggable: true,
+            });
+        }
+
+    }
+
     return (
         <>
             <div className="contact">
@@ -18,12 +51,12 @@ function Contact() {
                     </div>
                     <div className="contact__form-container">
                         <h3 className="contact__form-title">Liên hệ với chúng tôi</h3>
-                        <form className="contact__form">
+                        <form className="contact__form" onSubmit={handleSubmit}>
                             <input type="text" className="contact__input" placeholder="Họ tên*" required />
                             <input type="email" className="contact__input" placeholder="Email*" required />
                             <input type="tel" className="contact__input" placeholder="Số điện thoại*" required />
                             <textarea className="contact__textarea" placeholder="Nhập nội dung*" required></textarea>
-                            <button type="submit" className="contact__button">Gửi liên hệ của bạn</button>
+                            <button type="submit" className="contact__button" >Gửi liên hệ của bạn</button>
                         </form>
                     </div>
                     <div className="contact__map">

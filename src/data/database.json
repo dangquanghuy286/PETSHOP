@@ -404,5 +404,39 @@
       "password": "12341234",
       "token": "8EqTbuq8qrXYqI0dOc2k"
     }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "fullName": "Nguyễn Văn A",
+      "email": "nguyenvana@example.com",
+      "phone": "0905123456",
+      "message": "Tôi muốn biết thêm thông tin về sản phẩm của bạn.",
+      "timestamp": "2025-03-08T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "fullName": "Trần Thị B",
+      "email": "tranthib@example.com",
+      "phone": "0987654321",
+      "message": "Shop có hỗ trợ giao hàng không?",
+      "timestamp": "2025-03-08T11:15:00Z"
+    },
+    {
+      "id": 3,
+      "fullName": "Lê Quốc C",
+      "email": "lequocc@example.com",
+      "phone": "0912345678",
+      "message": "Làm thế nào để đặt hàng nhanh nhất?",
+      "timestamp": "2025-03-08T12:00:00Z"
+    },
+    {
+      "id": "c52d",
+      "fullName": "Đặng Hữu Quang Huy",
+      "email": "huy@gmail.com",
+      "phone": "010102029",
+      "message": "Sản phẩm chất lượng",
+      "timestamp": "2025-03-07T19:27:33.652Z"
+    }
   ]
 }
