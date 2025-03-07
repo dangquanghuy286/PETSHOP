@@ -10,7 +10,7 @@ function LayoutDefault() {
             <Header />
             <main className="layout-default__main"><Outlet /></main>
             <footer className="layout-default__footer" id="footer">
-                <hr />
+
                 <div className="layout-default__footer-section1">
                     <div className="layout-default__section1-block1">
                         <img src="Img/email.svg" alt="Email" />
@@ -25,7 +25,7 @@ function LayoutDefault() {
                         <p>Hotline: 123456789</p>
                     </div>
                 </div>
-                <hr />
+
                 <div className="layout-default__footer-section2">
                     <div className="layout-default__introduce">
                         <h2>GIỚI THIỆU</h2>

@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { setCookie } from "../../helpers/cookie";
 import { useDispatch } from "react-redux";
 import { checkLogin } from "../../actions/login";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 function Login() {
 
     const navigate = useNavigate();
@@ -21,7 +23,15 @@ function Login() {
 
 
         if (res.length > 0) {
-            alert("Login success")
+            Swal.fire({
+                title: "Thành công!",
+                background: "#fff9c4", // Màu nền vàng nhạt
+                color: "#4caf50", // Màu chữ xanh lá cây
+                confirmButtonColor: "#4caf50", // Màu nút xác nhận (xanh lá)
+                icon: "success",
+                draggable: true,
+
+            });
 
             setCookie("id", res[0].id, 1);
             setCookie("name", res[0].fullname, 1);
@@ -31,7 +41,17 @@ function Login() {
             navigate("/");
 
         } else {
-            alert("Login fail")
+            Swal.fire({
+                title: "Đăng nhập thất bại, hãy thử lại sau!",
+                icon: "error",
+                background: "#fff9c4",
+                color: "#990000",
+                confirmButtonColor: "#990000", // Màu nút xác nhận (đỏ)
+                customClass: {
+                    popup: 'custom-swal-popup' // Lớp CSS tùy chỉnh
+                }
+            });
+
         }
     }
     return (
