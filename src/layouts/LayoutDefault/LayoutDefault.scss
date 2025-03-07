@@ -55,7 +55,7 @@ li {
         /* Khi cuộn đến, phần tử sẽ dừng lại ở đỉnh trang */
         z-index: 999;
         /* Đảm bảo phần tử luôn hiển thị trên các thành phần khác */
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         background: var(--white);
     }
 
