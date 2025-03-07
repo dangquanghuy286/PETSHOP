@@ -12,11 +12,11 @@ function Footer() {
                     </div>
                     <div className="layout-default__section1-block2">
                         <input type="email" name="email" id="email" placeholder="Nhập email của bạn:" />
-                        <span>Đăng ký</span>
+                        <button className="layout-default__subscribe-btn">Đăng ký</button>
                     </div>
                     <div className="layout-default__section1-block3">
                         <img src="Img/phone.svg" alt="Phone" />
-                        <p>Hotline: 0905920794</p>
+                        <p>Hotline: <a href="tel:0905920794">0905920794</a></p>
                     </div>
                 </div>
                 <hr />
@@ -32,7 +32,7 @@ function Footer() {
                     <div className="layout-default__policy">
                         <h2>CHÍNH SÁCH</h2>
                         <ul>
-                            <li><NavLink to="#">Liên hệ</NavLink></li>
+                            <li><NavLink to="/contact">Liên hệ</NavLink></li>
                             <li><NavLink to="#">Hình thức thanh toán</NavLink></li>
                             <li><NavLink to="#">Điều khoản dịch vụ</NavLink></li>
                             <li><NavLink to="#">Chính sách vận chuyển</NavLink></li>
@@ -48,17 +48,17 @@ function Footer() {
                         </div>
                         <div className="layout-default__cover-contact">
                             <img src="Img/phone.svg" alt="SĐT" />
-                            <p>0905920794</p>
+                            <p><a href="tel:0905920794">0905920794</a></p>
                         </div>
                         <div className="layout-default__cover-contact">
                             <img src="Img/email.svg" alt="Email" />
-                            <p>foxicshop@gmail.com</p>
+                            <p><a href="mailto:foxicshop@gmail.com">foxicshop@gmail.com</a></p>
                         </div>
-
                     </div>
                 </div>
-                <div className="layout-default__copyRight">Copy Right @2025 by Quang Huy </div>
+                <div className="layout-default__copyRight">Copy Right © 2025 by Quang Huy </div>
             </footer>
+
         </>
     )
 }
