@@ -6,10 +6,16 @@ import { getCookie, deleteCookie } from "../../helpers/cookie"; // Thêm hàm de
 function Header() {
     const [token, setToken] = useState(getCookie("token")); // Lưu trạng thái token
 
-    // Cập nhật token nếu có thay đổi
+    // useEffect chạy một lần sau khi component mount
     useEffect(() => {
-        setToken(getCookie("token"));
+        // Định kỳ mỗi 1 giây, kiểm tra lại cookie và cập nhật token
+        const interval = setInterval(() => {
+            setToken(getCookie("token")); // Cập nhật token nếu có sự thay đổi
+        }, 1000); // Chạy mỗi giây (1000ms)
+
+        return () => clearInterval(interval); // Xóa interval khi component bị unmount để tránh rò rỉ bộ nhớ
     }, []);
+
 
     const handleLogout = () => {
         deleteCookie("token"); // Xóa token trong cookie
