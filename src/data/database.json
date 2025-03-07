@@ -438,5 +438,46 @@
       "message": "Sản phẩm chất lượng",
       "timestamp": "2025-03-07T19:27:33.652Z"
     }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Cách chăm sóc thú cưng đúng cách",
+      "author": "Nguyễn Văn A",
+      "date": "2025-03-08",
+      "content": "Chăm sóc thú cưng không chỉ là việc cho ăn mà còn cần đảm bảo môi trường sống sạch sẽ, chế độ dinh dưỡng hợp lý và hoạt động vui chơi.",
+      "tags": [
+        "Thú cưng",
+        "Chăm sóc",
+        "Dinh dưỡng"
+      ],
+      "image": "./Img/blog1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Top 5 loại thức ăn tốt nhất cho chó",
+      "author": "Trần Thị B",
+      "date": "2025-03-07",
+      "content": "Việc chọn thức ăn cho chó rất quan trọng, dưới đây là 5 loại thức ăn tốt nhất giúp cún cưng phát triển khỏe mạnh.",
+      "tags": [
+        "Thức ăn",
+        "Chó",
+        "Sức khỏe"
+      ],
+      "image": "./Img/blog2.png"
+    },
+    {
+      "id": 3,
+      "title": "Những bệnh thường gặp ở mèo và cách phòng tránh",
+      "author": "Lê Quốc C",
+      "date": "2025-03-06",
+      "content": "Mèo có thể mắc nhiều bệnh như viêm da, nấm, hay các bệnh đường ruột. Hãy cùng tìm hiểu cách phòng tránh và điều trị hiệu quả.",
+      "tags": [
+        "Mèo",
+        "Bệnh",
+        "Chăm sóc sức khỏe"
+      ],
+      "image": "./Img/blog3.webp"
+    }
   ]
 }
