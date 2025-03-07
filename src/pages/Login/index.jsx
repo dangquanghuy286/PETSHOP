@@ -3,9 +3,14 @@ import { FaUserAlt } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { getUserLogin } from "../../services/userService";
 import { useNavigate } from "react-router-dom";
+import { setCookie } from "../../helpers/cookie";
+import { useDispatch } from "react-redux";
+import { checkLogin } from "../../actions/login";
 function Login() {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
 
     const handleSubmit = async (e) => {
 
@@ -17,7 +22,14 @@ function Login() {
 
         if (res.length > 0) {
             alert("Login success")
+
+            setCookie("id", res[0].id, 1);
+            setCookie("name", res[0].fullname, 1);
+            setCookie("email", res[0].email, 1);
+            setCookie("token", res[0].token, 1);
+            dispatch(checkLogin(true));
             navigate("/");
+
         } else {
             alert("Login fail")
         }

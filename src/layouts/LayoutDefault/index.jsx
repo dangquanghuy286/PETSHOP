@@ -1,7 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "./LayoutDefault.scss"
 import Header from "./Header";
+
 function LayoutDefault() {
+
+
     return (
         <div className="layout-default">
             <Header />
