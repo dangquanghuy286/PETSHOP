@@ -1,6 +1,44 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { feedbackUseLogin } from "../../services/contactService";
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss';
 
 function Footer() {
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
+
+    const handleSub = async (e) => {
+        e.preventDefault();
+
+        // Kiểm tra email hợp lệ
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setError("Email không hợp lệ");
+            return;
+        }
+
+        const options = {
+            email: email,
+            timestamp: new Date().toISOString()
+        };
+        const res = await feedbackUseLogin(options);
+        if (res) {
+            Swal.fire({
+                title: "Gửi thông tin thành công!",
+                background: "#fff9c4", // Màu nền vàng nhạt
+                color: "#4caf50", // Màu chữ xanh lá cây
+                confirmButtonColor: "#4caf50", // Màu nút xác nhận (xanh lá)
+                icon: "success",
+                draggable: true,
+            });
+            setEmail(""); // Reset email input
+            setError(""); // Reset error message
+        } else {
+            setError("Đăng ký thất bại, hãy thử lại sau!");
+        }
+    };
+
     return (
         <>
             <footer className="layout-default__footer" id="footer">
@@ -11,8 +49,18 @@ function Footer() {
                         <p>Đăng ký nhận tin</p>
                     </div>
                     <div className="layout-default__section1-block2">
-                        <input type="email" name="email" id="email" placeholder="Nhập email của bạn:" />
-                        <button className="layout-default__subscribe-btn">Đăng ký</button>
+                        <form onSubmit={handleSub}>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Nhập email của bạn:"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <button type="submit" className="layout-default__subscribe-btn">Đăng ký</button>
+                        </form>
+                        {error && <p className="layout-default__message">{error}</p>}
                     </div>
                     <div className="layout-default__section1-block3">
                         <img src="Img/phone.svg" alt="Phone" />
@@ -58,8 +106,8 @@ function Footer() {
                 </div>
                 <div className="layout-default__copyRight">Copy Right © 2025 by Quang Huy </div>
             </footer>
-
         </>
-    )
+    );
 }
+
 export default Footer;
