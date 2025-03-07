@@ -2,9 +2,15 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CartMini from "../../components/CartMini";
 import { getCookie, deleteCookie } from "../../helpers/cookie"; // Thêm hàm deleteCookie
+import { useSelector } from "react-redux";
 
 function Header() {
     const [token, setToken] = useState(getCookie("token")); // Lưu trạng thái token
+
+    const isLogin = useSelector(state => state.loginReducer.isLogin);
+
+    console.log(isLogin);
+
 
     // useEffect chạy một lần sau khi component mount
     useEffect(() => {
