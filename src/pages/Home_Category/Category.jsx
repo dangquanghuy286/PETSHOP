@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
+import { Link } from "react-router-dom";
 
 function ICa(props) {
     const { item } = props;
@@ -21,7 +22,7 @@ function ICa(props) {
 
                 <div className="latest-products__icons">
                     <i className="fa-solid fa-heart"></i>
-                    <i className="fa-solid fa-eye"></i>
+                    <Link to={"/categories/" +item.id}><i className="fa-solid fa-eye"></i></Link>
                 </div>
             </div>
             <div className="shop-category__details">
@@ -30,7 +31,8 @@ function ICa(props) {
                         <i key={i} className="fa-solid fa-star"></i>
                     ))}
                 </div>
-                <h4 className="shop-category__name">{item.name}</h4>
+                <span className="shop-category__sub-category">Số lượng:{item.stock}</span>
+                <h6 className="feature-product__name">{item.name}</h6>
                 <h3 className="shop-category__price">{item.price.toLocaleString("vi-VN")} VNĐ</h3>
                 <button onClick={handleAddtocart} className="shop-category__button">Thêm vào giỏ hàng</button>
             </div>

@@ -82,7 +82,7 @@ function Footer() {
                         <ul>
                             <li><NavLink to="/contact">Liên hệ</NavLink></li>
                             <li><NavLink to="#">Hình thức thanh toán</NavLink></li>
-                            <li><NavLink to="#">Điều khoản dịch vụ</NavLink></li>
+                            <li><NavLink to="/intro">Điều khoản dịch vụ</NavLink></li>
                             <li><NavLink to="#">Chính sách vận chuyển</NavLink></li>
                             <li><NavLink to="#">Chính sách đổi trả</NavLink></li>
                             <li><NavLink to="#">Chính sách bảo mật thông tin</NavLink></li>

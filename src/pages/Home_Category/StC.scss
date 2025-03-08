@@ -158,7 +158,11 @@
             }
         }
     }
-
+    &__sub-category {
+        font-size: 14px;
+        font-weight: 500;
+        color: #e60b0b;
+    }
     &__details {
         text-align: center;
         padding: 15px;

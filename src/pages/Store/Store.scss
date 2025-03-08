@@ -1,5 +1,5 @@
 .banner {
-    margin-top: 50gpx;
+    margin-top: 50px;
     width: 84%;
     margin: auto;
     height: 60vh;
@@ -132,6 +132,11 @@
                 &:hover {
                     transform: translateY(-5px);
                 }
+
+                &:hover .product-grid__icons {
+                    right: 15px;
+                    opacity: 1;
+                }
             }
 
             &__image {
@@ -142,10 +147,10 @@
                 align-items: center;
                 overflow: hidden;
                 padding: 10px; // Tạo khoảng trống để ảnh không bị dính sát mép
+                position: relative;
 
                 img {
                     max-width: 100%;
-
                     object-fit: contain; // Hiển thị toàn bộ ảnh mà không bị cắt xén
                     transition: transform 0.3s ease-in-out;
 
@@ -153,6 +158,75 @@
                         transform: scale(1.05);
                     }
                 }
+            }
+
+            &__icons {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 17px;
+                right: -150px;
+                opacity: 0;
+                /* Mặc định ẩn */
+                transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+                i {
+                    width: 30px;
+                    height: 30px;
+                    padding: 15px;
+                    background-color: rgba(128, 128, 128, 0.1);
+                    text-align: center;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                i:hover {
+                    background-color: rgba(128, 128, 128, 0.3);
+                }
+            }
+
+            &__tag {
+                background-color: rgb(250, 14, 14); // Màu đỏ nổi bật cho giảm giá
+                color: #fff; // Chữ màu trắng để dễ đọc
+                border-radius: 50%; // Làm tròn 100% để tạo hình tròn
+                width: 45px; // Tăng kích thước để dễ nhìn
+                height: 45px;
+                position: absolute;
+                top: 10px; // Đặt vị trí hợp lý
+                left: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px; // Kích thước chữ vừa phải
+                font-weight: bold; // Chữ đậm hơn
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Hiệu ứng đổ bóng đẹp hơn
+                animation: pulse 1.5s infinite; // Hiệu ứng nhấp nháy nhẹ
+
+                // Hiệu ứng nhấp nháy
+                @keyframes pulse {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.1);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            &__sub-category {
+                font-size: 14px;
+                font-weight: 500;
+                color: #e60b0b;
             }
 
             &__name {
@@ -209,9 +283,6 @@
                 }
             }
         }
-
-
-
     }
 }
 

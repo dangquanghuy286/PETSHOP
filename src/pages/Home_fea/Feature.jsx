@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
+import { Link } from "react-router-dom";
 
 function FItem(props) {
     const { item } = props
@@ -19,7 +20,7 @@ function FItem(props) {
             <div className="feature-product__tag">-{item.discount}%</div>
             <div className="feature-product__icons">
                 <i className="fa-solid fa-heart"></i>
-                <i className="fa-solid fa-eye"></i>
+                <Link to={"/featured_products/"+item.id}><i className="fa-solid fa-eye"></i></Link>
             </div>
         </div>
         <div className="feature-product__details">
