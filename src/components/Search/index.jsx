@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Điều hướng trang
+import { useNavigate, Link } from "react-router-dom";
 
 function SearchItem() {
   const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false); // Kiểm soát dropdown
+  const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); // Hook điều hướng
-
-  // Xử lý khi nhập vào ô tìm kiếm
+  // Xử lý thay đổi input
   const handleInputChanged = (e) => {
     setQuery(e.target.value);
     if (e.target.value.trim() === "") {
@@ -18,25 +17,20 @@ function SearchItem() {
     }
   };
 
-  // Xử lý khi nhấn Search
+  // Tìm kiếm sản phẩm
   const handleSearch = async () => {
     if (query.trim() === "") return;
 
     setLoading(true);
-
     try {
       const response = await fetch(
         `http://localhost:3002/products?name_like=${query}`
       );
-      if (!response.ok) {
-        throw new Error("Lỗi khi lấy dữ liệu");
-      }
-
       const data = await response.json();
       setProducts(data || []);
-      setShowDropdown(data.length > 0); // Hiển thị dropdown nếu có kết quả
+      setShowDropdown(data.length > 0);
     } catch (error) {
-      console.error("Lỗi khi tìm kiếm sản phẩm:", error);
+      console.error("Lỗi tìm kiếm:", error);
       setProducts([]);
       setShowDropdown(false);
     } finally {
@@ -44,50 +38,42 @@ function SearchItem() {
     }
   };
 
-  // Xử lý khi nhấn Enter
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
-  };
-
-  // Điều hướng đến trang chi tiết sản phẩm
-  const handleProductClick = (id) => {
-    navigate(`/product/${id}`); // Điều hướng đến trang chi tiết
-    setShowDropdown(false); // Ẩn dropdown sau khi chọn
+  // Chuyển hướng sang trang chi tiết sản phẩm
+  const handleProductClick = (productId) => {
+    navigate(`/categories/${productId}`);
+    setShowDropdown(false);
   };
 
   return (
-    <div className="relative w-64">
+    <div className="layout-default__search">
       <input
         type="text"
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        placeholder="Tìm kiếm sản phẩm..."
+        placeholder="Tìm kiếm theo tên sản phẩm..."
         value={query}
         onChange={handleInputChanged}
-        onKeyDown={handleKeyDown}
+        onKeyDown={(e) => e.key === "Enter" && handleSearch()}
       />
-      <img
-        src="Img/icons-search.svg"
-        alt="Search"
-        className="absolute right-2 top-2 w-6 cursor-pointer"
-        onClick={handleSearch}
-      />
+      <img src="Img/icons-search.svg" alt="Search" onClick={handleSearch} />
 
-      {loading && <p className="mt-2 text-gray-500">Đang tìm kiếm...</p>}
+      {loading && <p>Đang tìm kiếm...</p>}
 
-      {/* Hiển thị dropdown khi có kết quả */}
       {showDropdown && (
-        <ul className="absolute z-10 mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg">
-          {products.map((product) => (
-            <li
-              key={product.id}
-              className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-              onClick={() => handleProductClick(product.id)}
-            >
-              {product.name} - {product.price.toLocaleString()}đ
-            </li>
-          ))}
+        <ul className="dropdown">
+          {products.length > 0
+            ? products.map((product) => (
+                <li
+                  key={product.id}
+                  onClick={() => handleProductClick(product.id)}
+                >
+                  <span>
+                    {product.name} - {product.price.toLocaleString()}đ
+                  </span>
+                  <button onClick={() => navigate(`/categories/${product.id}`)}>
+                    <i className="fa-solid fa-eye"></i>
+                  </button>
+                </li>
+              ))
+            : !loading && query && <p>Không tìm thấy sản phẩm nào!</p>}
         </ul>
       )}
     </div>
