@@ -156,42 +156,67 @@ li {
     &__action {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         padding: 1rem;
+        gap: 40px;
+        max-width: fit-content;
 
+        .layout-default__cart,
+        .layout-default__love,
+        .layout-default__account,
         .layout-default__search {
-            flex: 1;
-            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; // Chia đều không gian giữa các phần tử
+            max-width: none; // Loại bỏ kích thước cố định
+        }
+
+        .layout-default__love a {
             display: flex;
             align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: red;
+
+
+            &:hover {
+                color: darkred;
+                transform: scale(1.2); // Phóng to khi hover
+            }
+        }
+
+        .layout-default__search {
             border-radius: 5px;
             padding: 0 10px;
             position: relative;
             cursor: pointer;
+            justify-content: center;
 
             input {
-
                 height: 40px;
                 width: 40px;
                 max-width: 100%;
                 border-radius: 100px;
                 background-color: rgba(255, 255, 255, 0.1);
-                border: 5px solid #ffd80a;
+                border: 3px solid #ffd80a; // Giảm độ dày viền để trông đẹp hơn
                 color: #000;
-                padding-left: 15px; // Added for text spacing
-                transition: width 1.2s ease-in-out, opacity 1s ease-in-out; // Smoother transition
+                padding-left: 15px;
+                transition: width 0.5s ease-in-out; // Giảm thời gian transition để mượt hơn
                 text-align: center;
                 outline: none;
+                position: relative;
 
                 &::placeholder {
-                    color: #000000;
+                    color: #aaa9a9;
                     opacity: 0;
                     transition: opacity 0.8s ease-in-out;
                 }
 
                 &:hover,
                 &:focus {
-                    min-width: 140px;
+                    width: 250px; // Tăng kích thước khi focus
+                    text-align: left;
 
                     &::placeholder {
                         opacity: 0.8;
@@ -201,12 +226,11 @@ li {
 
             img {
                 position: absolute;
-                right: 20px; // Adjusted for better alignment
-                top: 50%; // Center vertically
-                transform: translateY(-50%); // Precise centering
-                width: 20px; // Assuming an icon size—adjust as needed
-                height: 20px;
-
+                right: 15px; // Dịch ảnh gần vào trong input hơn
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
             }
 
             &:hover {
@@ -215,15 +239,17 @@ li {
         }
 
         .layout-default__cart {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 0 10px;
             position: relative;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
 
             &:hover {
+                transform: scale(1.1);
+                /* Phóng to nhẹ khi hover */
+            }
+
+            .layout-default__cart &:hover {
                 transform: scale(1.1);
                 /* Phóng to nhẹ khi hover */
             }
@@ -251,7 +277,7 @@ li {
     &__account {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 5px;
 
         /* Tạo khoảng cách giữa các phần tử */
         a {
@@ -267,6 +293,41 @@ li {
                 color: #fbc02d;
                 /* Màu khi hover */
             }
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 300px; // Giới hạn chiều cao, thêm scroll khi quá dài
+        overflow-y: auto;
+        z-index: 1000;
+
+        li {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s ease-in-out;
+
+            &:hover {
+                background: #f5f5f5;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        p {
+            padding: 10px 15px;
+            color: #777;
+            font-size: 14px;
         }
     }
 
@@ -705,38 +766,3 @@ li {
         }
     }
 }
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 300px; // Giới hạn chiều cao, thêm scroll khi quá dài
-    overflow-y: auto;
-    z-index: 1000;
-    
-    li {
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.2s ease-in-out;
-  
-      &:hover {
-        background: #f5f5f5;
-      }
-  
-      &:not(:last-child) {
-        border-bottom: 1px solid #eee;
-      }
-    }
-  
-    p {
-      padding: 10px 15px;
-      color: #777;
-      font-size: 14px;
-    }
-  }
-  

@@ -79,6 +79,12 @@ function Header() {
           </div>
         )}
 
+        <div className="layout-default__love">
+          <NavLink to="/wishlist">
+            <i className="fas fa-heart"></i>
+          </NavLink>
+        </div>
+
         <div className="layout-default__account">
           {token ? (
             <NavLink to="/" onClick={handleLogout}>

@@ -1,4 +1,3 @@
-
 // import PrivateRoutes from "../components/PrivateRoutes";
 import PrivateRoutes from "../components/PrivateRoutes";
 import LayoutDefault from "../layouts/LayoutDefault";
@@ -18,79 +17,82 @@ import StoreAll from "../pages/Store/StoreALL";
 import Detail from "../pages/Store/StoreDetail";
 import StoreFeature from "../pages/Store/StroreFea";
 import StoreLatest from "../pages/Store/StroreLatest";
-
-
+import WishList from "../pages/WishLIst";
 
 export const routes = [
-    {
+  {
+    path: "/",
+    element: <LayoutDefault />,
+    children: [
+      {
         path: "/",
-        element: <LayoutDefault />,
+        element: <Home />,
+      },
+      {
+        path: "/intro",
+        element: <Intro />,
+      },
+      {
+        path: "categories",
+        element: <Store />,
         children: [
-            {
-                path: "/",
-                element: <Home />
-            },
-            {
-                path: "/intro",
-                element: <Intro />
-            }, {
-                path: "categories",
-                element: <Store />,
-                children: [
-                    {
-                        index: true,
-                        element: <StoreAll />
-                    },
-                    {
-                        path: "feature_product",
-                        element: <StoreFeature />
-                    },
-                    {
-                        path: "lastest_products",
-                        element: <StoreLatest />
-                    },
-                    {
-                        path: ":id",
-                        element: <Detail />
-                    }
-                ]
-            },
+          {
+            index: true,
+            element: <StoreAll />,
+          },
+          {
+            path: "feature_product",
+            element: <StoreFeature />,
+          },
+          {
+            path: "lastest_products",
+            element: <StoreLatest />,
+          },
+          {
+            path: ":id",
+            element: <Detail />,
+          },
+        ],
+      },
 
-            {
-                path: "contact",
-                element: <Contact />
-            },
-            {
-                path: "*",
-                element: <Error404 />
-            },
-            {
-                path: "login",
-                element: <Login />
-            },
-            {
-                path: "register",
-                element: <Register />
-            },
-            {
-                path: "logout",
-                element: <Logout />
-            },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <Error404 />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: "logout",
+        element: <Logout />,
+      },
 
-            {
-                path: "blog",
-                element: <Blog />
-            },
-            {
-                element: <PrivateRoutes />,
-                children: [
-                    {
-                        path: "cart",
-                        element: <Cart />
-                    }
-                ]
-
-            }
-        ]
-    }
-]
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+      {
+        path: "wishlist",
+        element: <WishList />,
+      },
+      {
+        element: <PrivateRoutes />,
+        children: [
+          {
+            path: "cart",
+            element: <Cart />,
+          },
+        ],
+      },
+    ],
+  },
+];
