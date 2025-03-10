@@ -1,38 +1,38 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom"; // Thêm Link
 import CartMini from "../../components/CartMini";
-import { getCookie, deleteCookie } from "../../helpers/cookie"; // Thêm hàm deleteCookie
+import { getCookie, deleteCookie } from "../../helpers/cookie";
 import { useSelector } from "react-redux";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
-import SearchItem from "../../components/Search";
 
 function Header() {
-  const [token, setToken] = useState(getCookie("token")); // Lưu trạng thái token
-
+  const [token, setToken] = useState(getCookie("token"));
   const isLogin = useSelector((state) => state.loginReducer.isLogin);
 
-  console.log(isLogin);
+  //Tìm kiếm
+  const [query, setQuery] = useState("");
 
-  // useEffect chạy một lần sau khi component mount
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const search = e.target.value;
+    setQuery(search);
+  };
+
+  //End Tìm kiếm
   useEffect(() => {
-    // Định kỳ mỗi 1 giây, kiểm tra lại cookie và cập nhật token
-    const interval = setInterval(() => {
-      setToken(getCookie("token")); // Cập nhật token nếu có sự thay đổi
-    }, 1000); // Chạy mỗi giây (1000ms)
-
-    return () => clearInterval(interval); // Xóa interval khi component bị unmount để tránh rò rỉ bộ nhớ
-  }, []);
+    setToken(getCookie("token"));
+  }, [isLogin]); // Chỉ cập nhật khi `isLogin` thay đổi
 
   const handleLogout = () => {
-    deleteCookie("token"); // Xóa token trong cookie
-    setToken(null); // Cập nhật UI ngay lập tức
+    deleteCookie("token");
+    setToken(null);
   };
 
   return (
     <header className="layout-default__header" id="myHeader">
       <div className="layout-default__logo">
         <NavLink to="/" className="logo">
-          <img src="Img/logo.webp" alt="" />
+          <img src="Img/logo.webp" alt="Logo" />
         </NavLink>
       </div>
 
@@ -69,7 +69,17 @@ function Header() {
       </div>
 
       <div className="layout-default__action">
-        <SearchItem />
+        <div className="layout-default__search">
+          <input
+            type="text"
+            placeholder="Tìm kiếm theo tên sản phẩm..."
+            onChange={handleSearch}
+            value={query}
+          />
+          <Link to="/categories">
+            <img src="Img/icons-search.svg" alt="Search" />
+          </Link>
+        </div>
 
         {token && (
           <div className="layout-default__cart">
@@ -93,12 +103,10 @@ function Header() {
           ) : (
             <>
               <NavLink to="/login">
-                <FaSignInAlt />
-                Đăng Nhập
+                <FaSignInAlt /> Đăng Nhập
               </NavLink>
               <NavLink to="/register">
-                <FaUserPlus />
-                Đăng Ký
+                <FaUserPlus /> Đăng Ký
               </NavLink>
             </>
           )}

@@ -278,6 +278,102 @@
         "main_ingredients": [],
         "function": "Cung cấp không gian sống an toàn"
       }
+    },
+    {
+      "id": "111",
+      "name": "Thức ăn cho chó Protein Plus",
+      "price": 300000,
+      "oldPrice": 320000,
+      "newPrice": 300000,
+      "unit": "2kg",
+      "category": 1,
+      "image": "/Img/dogs_food_1.webp",
+      "rating": 4.8,
+      "stock": 90,
+      "details": {
+        "brand": "Healthy Dog",
+        "type": "Hạt khô",
+        "suitable_for": "Chó con và trưởng thành",
+        "package_size": "2kg",
+        "main_ingredients": [
+          "Thịt bò",
+          "Khoai lang",
+          "Vitamin tổng hợp"
+        ],
+        "function": "Giúp xương chắc khỏe và phát triển toàn diện"
+      }
+    },
+    {
+      "id": "112",
+      "name": "Thức ăn cho chó Mini Bites",
+      "price": 180000,
+      "oldPrice": 200000,
+      "newPrice": 180000,
+      "unit": "1kg",
+      "category": 1,
+      "image": "/Img/dogs_food_2.jpg",
+      "rating": 4.7,
+      "stock": 120,
+      "details": {
+        "brand": "Mini Paws",
+        "type": "Hạt mềm",
+        "suitable_for": "Chó nhỏ",
+        "package_size": "1kg",
+        "main_ingredients": [
+          "Cá hồi",
+          "Gạo lứt",
+          "Hạt lanh"
+        ],
+        "function": "Cải thiện hệ tiêu hóa và sức khỏe da lông"
+      }
+    },
+    {
+      "id": "113",
+      "name": "Thức ăn cho chó Premium Care",
+      "price": 400000,
+      "oldPrice": 420000,
+      "newPrice": 400000,
+      "unit": "3kg",
+      "category": 1,
+      "image": "/Img/dogs_food_3.jpg",
+      "rating": 4.9,
+      "stock": 80,
+      "details": {
+        "brand": "Premium Paws",
+        "type": "Hạt hỗn hợp",
+        "suitable_for": "Chó lớn",
+        "package_size": "3kg",
+        "main_ingredients": [
+          "Gà tươi",
+          "Khoai tây",
+          "Dầu cá"
+        ],
+        "function": "Bổ sung Omega-3 giúp lông bóng mượt"
+      }
+    },
+    {
+      "id": "114",
+      "name": "Thức ăn cho chó Special Diet",
+      "price": 320000,
+      "oldPrice": 350000,
+      "newPrice": 320000,
+      "unit": "2.5kg",
+      "category": 1,
+      "image": "/Img/dogs_food_4.webp",
+      "rating": 4.6,
+      "stock": 75,
+      "details": {
+        "brand": "NutriDog",
+        "type": "Hạt không chứa gluten",
+        "suitable_for": "Chó nhạy cảm với thực phẩm",
+        "package_size": "2.5kg",
+        "main_ingredients": [
+          "Gà hữu cơ",
+          "Hạt diêm mạch",
+          "Rau xanh"
+        ],
+        "function": "Hỗ trợ hệ tiêu hóa và tránh dị ứng"
+      }
     }
   ],
   "company_info": [

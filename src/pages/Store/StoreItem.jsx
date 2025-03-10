@@ -9,6 +9,10 @@ function ProductItem(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const filterItem = Array.isArray(product)
+    ? product.filter((p) => p.name.toLowerCase().includes(query.toLowerCase()))
+    : [];
+
   const handleAddtocart = () => {
     if (!loggedIn()) {
       alert("Bạn phải đăng nhập để thêm sản phẩm vào giỏ hàng.");
