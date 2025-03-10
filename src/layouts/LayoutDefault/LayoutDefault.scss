@@ -172,19 +172,25 @@ li {
             max-width: none; // Loại bỏ kích thước cố định
         }
 
-        .layout-default__love a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: red;
+        .layout-default__love {
+            border-radius: 50%;
+            border: 3px solid var(--green);
+            padding: 5px;
 
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                color: var(--green);
 
-            &:hover {
-                color: darkred;
-                transform: scale(1.2); // Phóng to khi hover
+                &:hover {
+                    color: darkred;
+                    transform: scale(1.2); // Phóng to khi hover
+                }
             }
         }
+
 
         .layout-default__search {
             border-radius: 5px;
